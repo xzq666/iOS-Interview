@@ -44,25 +44,25 @@ iOS设备的硬件时钟会发出Vsync(垂直同步信号)，然后App的CPU 会
 3）[CALayer display] <br/>
 4）是否响应view.layer.delegate的displayLayer方法，如果不响应displayLayer方法，就会进入到系统绘制流程当中；如果响应displayLayer方法，就会开启异步绘制。<br/>
 系统绘制：<br/>
-- 判断是否使用layer的代理方法。<br/>
-- 如果使用，就调用系统的drawLayer方法，通过UIView的drawRect进行视图绘制。<br/>
-- 如果不使用，调用drawinContext方法。<br/>
-- 最终是CALayer上传位图到GPU。<br/>
+1）判断是否使用layer的代理方法。<br/>
+2）如果使用，就调用系统的drawLayer方法，通过UIView的drawRect进行视图绘制。<br/>
+3）如果不使用，调用drawinContext方法。<br/>
+4）最终是CALayer上传位图到GPU。<br/>
 异步绘制：响应displayLayer，代理负责生成对应的位图，位图作为layer.contents属性的值。<br/>
-- 在主队列调用setNeedsDisplay。<br/>
-- 在当前runloop将要结束的时候，调用display方法，代理实现displayLayer函数，调用displayLayer方法。<br/>
-- 通过子线程切换，进行位图绘制。<br/>
-- 子线程中三个方法，CGBitmapContextCreate()创建位图上下文，通过CoreGraphic API进行位图绘制工作，通过位图上下文生成图片。<br/>
-- 回到主队列当中，提交位图，设置CALayer的content属性，完成CALayer的异步绘制。<br/>
+1）在主队列调用setNeedsDisplay。<br/>
+2）在当前runloop将要结束的时候，调用display方法，代理实现displayLayer函数，调用displayLayer方法。<br/>
+3）通过子线程切换，进行位图绘制。<br/>
+4）子线程中三个方法，CGBitmapContextCreate()创建位图上下文，通过CoreGraphic API进行位图绘制工作，通过位图上下文生成图片。<br/>
+5）回到主队列当中，提交位图，设置CALayer的content属性，完成CALayer的异步绘制。<br/>
 
 9、谈谈对离屏渲染的理解？<br/>
 On-Screen Rendering：当前屏幕渲染，指的是GPU的渲染操作是在当前用于显示的屏幕缓冲区中进行。<br/>
 Off-Screen Rendering：离屏渲染，分为CPU离屏渲染和GPU离屏渲染两种形式。GPU离屏渲染指的是GPU在当前屏幕缓冲区外新开辟一个缓冲区进行渲染操作。<br/>
 触发离屏渲染的操作：<br/>
-- 圆角(与maskToBounds一起使用时)。<br/>
-- 图层蒙版。<br/>
-- 阴影(shadows)。<br/>
-- 光栅化(shouldRasterize)。<br/>
+1）圆角(与maskToBounds一起使用时)。<br/>
+2）图层蒙版。<br/>
+3）阴影(shadows)。<br/>
+4）光栅化(shouldRasterize)。<br/>
 GPU需要做额外的渲染操作。通常GPU在做渲染的时候是很快的，但是涉及到离屏渲染的时候情况就可能有些不同，因为需要额外开辟一个新的缓冲区进行渲染，然后绘制到当前屏幕的过程需要做onscreen跟offscreen上下文之间的切换，这个过程的消耗会比较昂贵，涉及到OpenGL的pipeline跟barrier，而且offscreen-render在每一帧都会涉及到，因此处理不当肯定会对性能产生一定的影响。另外由于离屏渲染会增加GPU的工作量，可能会导致CPU+GPU的处理时间超出16.7ms，导致掉帧卡顿。所以可以的话应尽量 减少离屏渲染的图层。
 
 
