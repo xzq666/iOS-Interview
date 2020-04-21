@@ -16,6 +16,9 @@
 		F0244AE2244EA03400897508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0244AE0244EA03400897508 /* LaunchScreen.storyboard */; };
 		F0244AE5244EA03400897508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AE4244EA03400897508 /* main.m */; };
 		F0244AEC244EA1E300897508 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0244AEB244EA1E300897508 /* README.md */; };
+		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
+		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
+		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,13 @@
 		F0244AE3244EA03400897508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0244AE4244EA03400897508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0244AEB244EA1E300897508 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0B7C524244EBEA50066546F /* UI相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "UI相关.md"; sourceTree = "<group>"; };
+		F0B7C526244ECAC50066546F /* UIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
+		F0B7C527244ECAC50066546F /* UIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
+		F0B7C52A244EDB2C0066546F /* XZQButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQButton.h; sourceTree = "<group>"; };
+		F0B7C52B244EDB2C0066546F /* XZQButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQButton.m; sourceTree = "<group>"; };
+		F0B7C52D244EDF780066546F /* XZQView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQView.h; sourceTree = "<group>"; };
+		F0B7C52E244EDF780066546F /* XZQView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,7 @@
 		F0244AD1244EA03200897508 /* iOS-Interview */ = {
 			isa = PBXGroup;
 			children = (
+				F0B7C523244EBE920066546F /* UI相关 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -101,6 +112,36 @@
 				F0244AE4244EA03400897508 /* main.m */,
 			);
 			path = "iOS-Interview";
+			sourceTree = "<group>";
+		};
+		F0B7C523244EBE920066546F /* UI相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0B7C524244EBEA50066546F /* UI相关.md */,
+				F0B7C529244EDB140066546F /* View */,
+				F0B7C525244ECAA80066546F /* Controller */,
+			);
+			path = "UI相关";
+			sourceTree = "<group>";
+		};
+		F0B7C525244ECAA80066546F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0B7C526244ECAC50066546F /* UIController.h */,
+				F0B7C527244ECAC50066546F /* UIController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0B7C529244EDB140066546F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0B7C52A244EDB2C0066546F /* XZQButton.h */,
+				F0B7C52B244EDB2C0066546F /* XZQButton.m */,
+				F0B7C52D244EDF780066546F /* XZQView.h */,
+				F0B7C52E244EDF780066546F /* XZQView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
+				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
+				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,

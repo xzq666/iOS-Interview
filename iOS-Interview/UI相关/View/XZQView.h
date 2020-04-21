@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XZQView.h
 //  iOS-Interview
 //
 //  Created by qhzc-iMac-02 on 2020/4/21.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface XZQView : UIView
 
 @end
 
+NS_ASSUME_NONNULL_END
