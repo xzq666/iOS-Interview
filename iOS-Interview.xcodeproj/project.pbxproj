@@ -19,6 +19,7 @@
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
+		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		F0B7C52B244EDB2C0066546F /* XZQButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQButton.m; sourceTree = "<group>"; };
 		F0B7C52D244EDF780066546F /* XZQView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQView.h; sourceTree = "<group>"; };
 		F0B7C52E244EDF780066546F /* XZQView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQView.m; sourceTree = "<group>"; };
+		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
+		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
+		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F0B7C523244EBE920066546F /* UI相关 */,
+				F0BF3E53244FD03E0063B2B2 /* Animation动画 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -142,6 +147,24 @@
 				F0B7C52E244EDF780066546F /* XZQView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F0BF3E53244FD03E0063B2B2 /* Animation动画 */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF3E54244FD05A0063B2B2 /* Animation动画.md */,
+				F0BF3E55244FD5E30063B2B2 /* Controller */,
+			);
+			path = "Animation动画";
+			sourceTree = "<group>";
+		};
+		F0BF3E55244FD5E30063B2B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF3E56244FD60C0063B2B2 /* AnimationController.h */,
+				F0BF3E57244FD60C0063B2B2 /* AnimationController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +268,7 @@
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
+				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,
 				F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */,

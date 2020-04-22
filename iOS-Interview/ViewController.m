@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIController.h"
+#import "AnimationController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -32,8 +33,9 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关"];
-    NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等"];
+    NSArray *titles = @[@"UI相关", @"Animation动画"];
+    NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
+                           @"Animation动画相关面试题，包括隐式动画、核心动画等"];
     [self loadNewData:titles sub:subTitles];
 }
 
@@ -66,6 +68,12 @@
     switch (indexPath.row) {
         case 0: {
             UIController *vc = [[UIController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 1: {
+            AnimationController *vc = [[AnimationController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
