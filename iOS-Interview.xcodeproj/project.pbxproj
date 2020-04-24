@@ -16,6 +16,9 @@
 		F0244AE2244EA03400897508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0244AE0244EA03400897508 /* LaunchScreen.storyboard */; };
 		F0244AE5244EA03400897508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AE4244EA03400897508 /* main.m */; };
 		F0244AEC244EA1E300897508 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0244AEB244EA1E300897508 /* README.md */; };
+		F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F888A245273FD008C1E95 /* OCLanguageController.m */; };
+		F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F889024528AB4008C1E95 /* MessagePassController.m */; };
+		F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A126C1245134130001F8D7 /* OCGroundController.m */; };
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
@@ -39,6 +42,15 @@
 		F0244AE3244EA03400897508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0244AE4244EA03400897508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0244AEB244EA1E300897508 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F03F8886245273B8008C1E95 /* OC语言.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC语言.md"; sourceTree = "<group>"; };
+		F03F8889245273FD008C1E95 /* OCLanguageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLanguageController.h; sourceTree = "<group>"; };
+		F03F888A245273FD008C1E95 /* OCLanguageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLanguageController.m; sourceTree = "<group>"; };
+		F03F888E24528A8F008C1E95 /* 消息传递方式.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "消息传递方式.md"; sourceTree = "<group>"; };
+		F03F888F24528AB4008C1E95 /* MessagePassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePassController.h; sourceTree = "<group>"; };
+		F03F889024528AB4008C1E95 /* MessagePassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagePassController.m; sourceTree = "<group>"; };
+		F0A126BF24512A3A0001F8D7 /* OC对象底层.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象底层.md"; sourceTree = "<group>"; };
+		F0A126C0245134130001F8D7 /* OCGroundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCGroundController.h; sourceTree = "<group>"; };
+		F0A126C1245134130001F8D7 /* OCGroundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCGroundController.m; sourceTree = "<group>"; };
 		F0B7C524244EBEA50066546F /* UI相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "UI相关.md"; sourceTree = "<group>"; };
 		F0B7C526244ECAC50066546F /* UIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIController.h; sourceTree = "<group>"; };
 		F0B7C527244ECAC50066546F /* UIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIController.m; sourceTree = "<group>"; };
@@ -104,6 +116,9 @@
 			children = (
 				F0B7C523244EBE920066546F /* UI相关 */,
 				F0BF3E53244FD03E0063B2B2 /* Animation动画 */,
+				F0A126BE245129860001F8D7 /* OC对象底层 */,
+				F03F8885245273A5008C1E95 /* OC语言 */,
+				F03F888C24528A6F008C1E95 /* 消息传递方式 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -117,6 +132,60 @@
 				F0244AE4244EA03400897508 /* main.m */,
 			);
 			path = "iOS-Interview";
+			sourceTree = "<group>";
+		};
+		F03F8885245273A5008C1E95 /* OC语言 */ = {
+			isa = PBXGroup;
+			children = (
+				F03F8886245273B8008C1E95 /* OC语言.md */,
+				F03F8888245273D0008C1E95 /* Controller */,
+			);
+			path = "OC语言";
+			sourceTree = "<group>";
+		};
+		F03F8887245273C2008C1E95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0A126C0245134130001F8D7 /* OCGroundController.h */,
+				F0A126C1245134130001F8D7 /* OCGroundController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F03F8888245273D0008C1E95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F03F8889245273FD008C1E95 /* OCLanguageController.h */,
+				F03F888A245273FD008C1E95 /* OCLanguageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F03F888C24528A6F008C1E95 /* 消息传递方式 */ = {
+			isa = PBXGroup;
+			children = (
+				F03F888E24528A8F008C1E95 /* 消息传递方式.md */,
+				F03F888D24528A7B008C1E95 /* Controller */,
+			);
+			path = "消息传递方式";
+			sourceTree = "<group>";
+		};
+		F03F888D24528A7B008C1E95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F03F888F24528AB4008C1E95 /* MessagePassController.h */,
+				F03F889024528AB4008C1E95 /* MessagePassController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0A126BE245129860001F8D7 /* OC对象底层 */ = {
+			isa = PBXGroup;
+			children = (
+				F0A126BF24512A3A0001F8D7 /* OC对象底层.md */,
+				F03F8887245273C2008C1E95 /* Controller */,
+			);
+			path = "OC对象底层";
 			sourceTree = "<group>";
 		};
 		F0B7C523244EBE920066546F /* UI相关 */ = {
@@ -265,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
+				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
@@ -272,6 +342,8 @@
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,
 				F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */,
+				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
+				F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

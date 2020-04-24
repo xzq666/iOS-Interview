@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "UIController.h"
 #import "AnimationController.h"
+#import "OCGroundController.h"
+#import "OCLanguageController.h"
+#import "MessagePassController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -17,9 +20,11 @@
 @implementation Module
 @end
 
-@interface ViewController ()
+@interface ViewController ()<TestDelegate>
 
 @property(nonatomic,strong) NSMutableArray *dataSource;
+
+@property(nonatomic,copy) NSString *backValue;
 
 @end
 
@@ -33,10 +38,15 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
-                           @"Animation动画相关面试题，包括隐式动画、核心动画等"];
+                           @"Animation动画相关面试题，包括隐式动画、核心动画等",
+                           @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
+                           @"OC语言相关面试题，主要来自Foundation框架",
+                           @"消息传递相关面试题，包括通知、代理等"];
     [self loadNewData:titles sub:subTitles];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
 }
 
 - (void)loadNewData:(NSArray *)titles sub:(NSArray *)subTitles {
@@ -78,9 +88,48 @@
             break;
         }
             
+        case 2: {
+            OCGroundController *vc = [[OCGroundController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 3: {
+            OCLanguageController *vc = [[OCLanguageController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 4: {
+            MessagePassController *vc = [[MessagePassController alloc] init];
+            vc.delegate = self;
+            vc.block = ^(NSString *param1, NSString * param2) {
+                NSString *value = [NSString stringWithFormat:@"%@ - %@", param1, param2];
+                NSLog(@"获取到block返回过来的页面值：%@", value);
+            };
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
         default:
             break;
     }
+}
+
+- (void)getValueFromVC:(NSNotification *)noti {
+    NSDictionary *dict = noti.object;
+    NSString *value = [NSString stringWithFormat:@"%@ - %@", dict[@"param1"], dict[@"param2"]];
+    NSLog(@"获取到通知返回过来的页面值：%@", value);
+}
+
+- (void)testWithParam1:(NSString *)param1 param2:(NSString *)param2 {
+    NSString *value = [NSString stringWithFormat:@"%@ - %@", param1, param2];
+    NSLog(@"获取到delegate返回过来的页面值：%@", value);
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"getValueFromVC" object:nil];
 }
 
 @end
