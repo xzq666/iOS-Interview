@@ -12,3 +12,16 @@ iOS面试题分析
 1、创建CALayer实现隐式动画。<br/>
 2、使用UIView动画。<br/>
 3、使用核心动画。<br/>
+
+### [OC对象底层](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/OC对象底层/OC对象底层.md)
+代码：<br/>
+使用strong、copy修饰NSString时的区别。<br/>
+
+### [OC语言](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/OC语言/OC语言.md)
+代码：<br/>
+1、[self class]、[super class]是同一个类对象验证。<br/>
+2、__typeof__与__typeof与typeof关键字。<br/>
+
+### [消息传递方式](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/消息传递方式/消息传递方式.md)
+代码：<br/>
+使用delegate、block、通知方式实现页面跳转的数据回传。<br/>
