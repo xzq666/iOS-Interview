@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"消息传递";
+    self.title = @"消息传递方式";
     self.view.backgroundColor = [UIColor systemBackgroundColor];
     
     [self messagePass];

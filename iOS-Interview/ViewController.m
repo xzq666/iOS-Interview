@@ -38,12 +38,12 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
                            @"OC语言相关面试题，主要来自Foundation框架",
-                           @"消息传递相关面试题，包括通知、代理等"];
+                           @"消息传递方式相关面试题，包括通知、代理等"];
     [self loadNewData:titles sub:subTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
