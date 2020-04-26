@@ -23,6 +23,9 @@
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
+		F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E1B245516FD00F77AAD /* KVOController.m */; };
+		F0E58E222455178B00F77AAD /* KVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E212455178B00F77AAD /* KVCController.m */; };
+		F0E58E262455270100F77AAD /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E252455270100F77AAD /* KVCModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,14 @@
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		F0E58E19245516DF00F77AAD /* KVO相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "KVO相关.md"; sourceTree = "<group>"; };
+		F0E58E1A245516FD00F77AAD /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
+		F0E58E1B245516FD00F77AAD /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
+		F0E58E1E2455177100F77AAD /* KVC相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "KVC相关.md"; sourceTree = "<group>"; };
+		F0E58E202455178B00F77AAD /* KVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCController.h; sourceTree = "<group>"; };
+		F0E58E212455178B00F77AAD /* KVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCController.m; sourceTree = "<group>"; };
+		F0E58E242455270100F77AAD /* KVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModel.h; sourceTree = "<group>"; };
+		F0E58E252455270100F77AAD /* KVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +130,8 @@
 				F0A126BE245129860001F8D7 /* OC对象底层 */,
 				F03F8885245273A5008C1E95 /* OC语言 */,
 				F03F888C24528A6F008C1E95 /* 消息传递方式 */,
+				F0E58E17245516BC00F77AAD /* KVO相关 */,
+				F0E58E1D2455175F00F77AAD /* KVC相关 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -236,6 +249,52 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F0E58E17245516BC00F77AAD /* KVO相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0E58E19245516DF00F77AAD /* KVO相关.md */,
+				F0E58E18245516C900F77AAD /* Controller */,
+			);
+			path = "KVO相关";
+			sourceTree = "<group>";
+		};
+		F0E58E18245516C900F77AAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0E58E1A245516FD00F77AAD /* KVOController.h */,
+				F0E58E1B245516FD00F77AAD /* KVOController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0E58E1D2455175F00F77AAD /* KVC相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0E58E1E2455177100F77AAD /* KVC相关.md */,
+				F0E58E23245526E400F77AAD /* Model */,
+				F0E58E1F2455177A00F77AAD /* Controller */,
+			);
+			path = "KVC相关";
+			sourceTree = "<group>";
+		};
+		F0E58E1F2455177A00F77AAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0E58E202455178B00F77AAD /* KVCController.h */,
+				F0E58E212455178B00F77AAD /* KVCController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0E58E23245526E400F77AAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0E58E242455270100F77AAD /* KVCModel.h */,
+				F0E58E252455270100F77AAD /* KVCModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,12 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E58E262455270100F77AAD /* KVCModel.m in Sources */,
 				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
 				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
+				F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
+				F0E58E222455178B00F77AAD /* KVCController.m in Sources */,
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,
 				F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */,
