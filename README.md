@@ -25,3 +25,12 @@ iOS面试题分析
 ### [消息传递方式](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/消息传递方式/消息传递方式.md)
 代码：<br/>
 使用delegate、block、通知方式实现页面跳转的数据回传。<br/>
+
+### [KVO相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/KVO相关/KVO相关.md)
+代码：<br/>
+查看添加KVO前后类的isa指针变换。<br/>
+
+### [KVC相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/KVC相关/KVC相关.md)
+代码：<br/>
+1、验证KVC赋值与取值过程。<br/>
+2、验证KVC修改属性会触发KVO。<br/>
