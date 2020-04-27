@@ -38,5 +38,5 @@ load方法会在Runtime加载类、分类时就调用一次。先调用类的loa
 
 11、load、initialize方法的区别是什么？它们在Category中的调用顺序？出现继承时它们之间的调用过程？<br/>
 load是根据函数地址直接调用，不会覆盖，而initialize是通过objc_msgSend调用，会覆盖；load是Runtime加载类、分类的时候调用，而initialize是类第一次接收到消息时调用。<br/>
-load先按照编译顺序调用类的load，调用子类的load之前会调用父类的load，然后再按照编译顺序调用分类的load；initialize在类第一次接收到消息时通过objc_msgSend调用，先调用父类的initialize再调用子类的initialize，若分类实现了initialize就覆盖类原来的initialize调用，若子类没有实现initialize，会调用父类的initialize。<br/>
+load先按照编译顺序调用类的load，调用子类的load之前会调用父类的load，然后再按照编译顺序调用分类的load；initialize在类第一次接收到消息时通过objc_msgSend调用，若分类实现了initialize就覆盖类原来的initialize调用，若子类没有实现initialize，会调用父类的initialize。<br/>
 出现继承时load是先调用父类的再调用子类的，而initialize是子类不存在（包括子类与子类的分类）再调用父类的（包括父类与父类的分类）。<br/>
