@@ -15,6 +15,7 @@
 #import "KVOController.h"
 #import "KVCController.h"
 #import "CategoryController.h"
+#import "BlockController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -41,7 +42,7 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
@@ -49,7 +50,8 @@
                            @"消息传递方式相关面试题，包括通知、代理等",
                            @"KVO相关面试题，例如KVO原理、触发KVO方式等",
                            @"KVC相关面试题，例如KVC的赋值、取值过程等",
-                           @"分类Category相关面试题，包括分类的实现原理、加载过程等"];
+                           @"分类Category相关面试题，包括分类的实现原理、加载过程等",
+                           @"block相关面试题，例如block原理、__block修饰符、block循环引用等"];
     [self loadNewData:titles sub:subTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
@@ -131,6 +133,12 @@
             
         case 7: {
             CategoryController *vc = [[CategoryController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 8: {
+            BlockController *vc = [[BlockController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

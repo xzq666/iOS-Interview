@@ -18,6 +18,7 @@
 		F0244AEC244EA1E300897508 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0244AEB244EA1E300897508 /* README.md */; };
 		F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F888A245273FD008C1E95 /* OCLanguageController.m */; };
 		F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F889024528AB4008C1E95 /* MessagePassController.m */; };
+		F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05DD0B12457BDF7006DE571 /* BlockController.m */; };
 		F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A126C1245134130001F8D7 /* OCGroundController.m */; };
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
@@ -59,6 +60,9 @@
 		F03F888E24528A8F008C1E95 /* 消息传递方式.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "消息传递方式.md"; sourceTree = "<group>"; };
 		F03F888F24528AB4008C1E95 /* MessagePassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePassController.h; sourceTree = "<group>"; };
 		F03F889024528AB4008C1E95 /* MessagePassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagePassController.m; sourceTree = "<group>"; };
+		F05DD0AE2457BDD8006DE571 /* block相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "block相关.md"; sourceTree = "<group>"; };
+		F05DD0B02457BDF7006DE571 /* BlockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockController.h; sourceTree = "<group>"; };
+		F05DD0B12457BDF7006DE571 /* BlockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockController.m; sourceTree = "<group>"; };
 		F0A126BF24512A3A0001F8D7 /* OC对象底层.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象底层.md"; sourceTree = "<group>"; };
 		F0A126C0245134130001F8D7 /* OCGroundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCGroundController.h; sourceTree = "<group>"; };
 		F0A126C1245134130001F8D7 /* OCGroundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCGroundController.m; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				F0E58E17245516BC00F77AAD /* KVO相关 */,
 				F0E58E1D2455175F00F77AAD /* KVC相关 */,
 				F0EE805424566FDA00B4F264 /* 分类Category相关 */,
+				F05DD0AD2457BDBE006DE571 /* block相关 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -215,6 +220,24 @@
 			children = (
 				F03F888F24528AB4008C1E95 /* MessagePassController.h */,
 				F03F889024528AB4008C1E95 /* MessagePassController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F05DD0AD2457BDBE006DE571 /* block相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F05DD0AE2457BDD8006DE571 /* block相关.md */,
+				F05DD0AF2457BDE0006DE571 /* Controller */,
+			);
+			path = "block相关";
+			sourceTree = "<group>";
+		};
+		F05DD0AF2457BDE0006DE571 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F05DD0B02457BDF7006DE571 /* BlockController.h */,
+				F05DD0B12457BDF7006DE571 /* BlockController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,6 +506,7 @@
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
+				F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */,
 				F0EE806F24568E2C00B4F264 /* CategoryFirstSubModel+One.m in Sources */,
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
