@@ -24,6 +24,7 @@
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
+		F0CF36E62459236400B55A23 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CF36E52459236400B55A23 /* BlockModel.m */; };
 		F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E1B245516FD00F77AAD /* KVOController.m */; };
 		F0E58E222455178B00F77AAD /* KVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E212455178B00F77AAD /* KVCController.m */; };
 		F0E58E262455270100F77AAD /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E252455270100F77AAD /* KVCModel.m */; };
@@ -76,6 +77,8 @@
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		F0CF36E42459236400B55A23 /* BlockModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockModel.h; sourceTree = "<group>"; };
+		F0CF36E52459236400B55A23 /* BlockModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockModel.m; sourceTree = "<group>"; };
 		F0E58E19245516DF00F77AAD /* KVO相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "KVO相关.md"; sourceTree = "<group>"; };
 		F0E58E1A245516FD00F77AAD /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
 		F0E58E1B245516FD00F77AAD /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				F05DD0AE2457BDD8006DE571 /* block相关.md */,
+				F0CF36E32459235300B55A23 /* Model */,
 				F05DD0AF2457BDE0006DE571 /* Controller */,
 			);
 			path = "block相关";
@@ -297,6 +301,15 @@
 				F0BF3E57244FD60C0063B2B2 /* AnimationController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0CF36E32459235300B55A23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0CF36E42459236400B55A23 /* BlockModel.h */,
+				F0CF36E52459236400B55A23 /* BlockModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F0E58E17245516BC00F77AAD /* KVO相关 */ = {
@@ -508,6 +521,7 @@
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
 				F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */,
 				F0EE806F24568E2C00B4F264 /* CategoryFirstSubModel+One.m in Sources */,
+				F0CF36E62459236400B55A23 /* BlockModel.m in Sources */,
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,

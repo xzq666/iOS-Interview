@@ -7,11 +7,9 @@
 //
 
 #import "BlockController.h"
+#import "BlockModel.h"
 
 @interface BlockController ()
-
-@property(nonatomic,assign) NSInteger age;
-@property(nonatomic,copy) NSInteger(^block5)(NSInteger);
 
 @end
 
@@ -90,14 +88,14 @@ NSMutableArray *k3;
     NSLog(@"%@", [block3 class]);
     NSLog(@"%@", [block4 class]);
 
-    self.age = 5;
-    __weak typeof(self) weakSelf = self;
-    self.block5 = ^NSInteger(NSInteger n) {
-        NSLog(@"age: %zd", weakSelf.age);
-        n = self.age + n;
-        return n;
+    BlockModel *model = [[BlockModel alloc] init];
+    model.age = 25;
+    __weak typeof(model) weakModel = model;
+    model.block = ^NSInteger(NSInteger n) {
+        NSLog(@"before age: %zd", weakModel.age);
+        return model.age + n;
     };
-    NSLog(@"%zd", self.block5(2));
+    NSLog(@"%zd", model.block(2));
 }
 
 @end
