@@ -40,3 +40,8 @@ iOS面试题分析
 1、验证load执行顺序。<br/>
 2、验证initialize执行顺序。<br/>
 3、关联对象为分类模仿添加成员变量。<br/>
+
+### [block相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/block相关/block相关.md)
+代码：<br/>
+1）block变量捕获。<br/>
+2）block循环引用。<br/>
