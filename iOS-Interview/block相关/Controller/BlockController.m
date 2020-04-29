@@ -10,6 +10,9 @@
 
 @interface BlockController ()
 
+@property(nonatomic,assign) NSInteger age;
+@property(nonatomic,copy) NSInteger(^block5)(NSInteger);
+
 @end
 
 @implementation BlockController
@@ -86,6 +89,15 @@ NSMutableArray *k3;
     NSLog(@"%@", [block2 class]);
     NSLog(@"%@", [block3 class]);
     NSLog(@"%@", [block4 class]);
+
+    self.age = 5;
+    __weak typeof(self) weakSelf = self;
+    self.block5 = ^NSInteger(NSInteger n) {
+        NSLog(@"age: %zd", weakSelf.age);
+        n = self.age + n;
+        return n;
+    };
+    NSLog(@"%zd", self.block5(2));
 }
 
 @end
