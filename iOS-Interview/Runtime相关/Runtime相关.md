@@ -65,12 +65,12 @@ Runtime 实现 weak 属性具体流程大致分为 3 步：<br/>
 OC中的方法调用其实都是转成了objc_msgSend函数的调用，给receiver（方法调用者）发送了一条消息（selector方法名）。<br/>
 objc_msgSend底层有3大阶段：消息发送（当前类、父类中查找）、动态方法解析、消息转发。<br/>
 1）消息发送</br>
-![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/消息发送.jpg)
+![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/消息发送.jpg)</br>
 2）动态方法解析</br>
-![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/动态方法解析.jpg)
+![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/动态方法解析.jpg)</br>
 3）消息转发</br>
-将消息转发给别人。
-![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/消息转发.jpg)
+将消息转发给别人。</br>
+![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/消息转发.jpg)</br>
 
 6、Runtime 如何通过 selector 找到对应的IMP地址？<br/>
 1）每一个类对象中都一个对象方法列表（对象方法缓存）。<br/>
