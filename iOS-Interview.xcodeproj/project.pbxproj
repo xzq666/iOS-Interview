@@ -23,6 +23,9 @@
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
+		F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A70245A5C3E00003376 /* RuntimeController.m */; };
+		F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A75245A7C0A00003376 /* RuntimeModel.m */; };
+		F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A78245A7EBF00003376 /* TargetModel.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
 		F0CF36E62459236400B55A23 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CF36E52459236400B55A23 /* BlockModel.m */; };
 		F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E1B245516FD00F77AAD /* KVOController.m */; };
@@ -74,6 +77,13 @@
 		F0B7C52B244EDB2C0066546F /* XZQButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQButton.m; sourceTree = "<group>"; };
 		F0B7C52D244EDF780066546F /* XZQView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQView.h; sourceTree = "<group>"; };
 		F0B7C52E244EDF780066546F /* XZQView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQView.m; sourceTree = "<group>"; };
+		F0B94A6F245A5C3E00003376 /* RuntimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
+		F0B94A70245A5C3E00003376 /* RuntimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
+		F0B94A72245A5C4900003376 /* Runtime相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Runtime相关.md"; sourceTree = "<group>"; };
+		F0B94A74245A7C0A00003376 /* RuntimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeModel.h; sourceTree = "<group>"; };
+		F0B94A75245A7C0A00003376 /* RuntimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeModel.m; sourceTree = "<group>"; };
+		F0B94A77245A7EBF00003376 /* TargetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
+		F0B94A78245A7EBF00003376 /* TargetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
@@ -167,6 +177,7 @@
 				F0E58E1D2455175F00F77AAD /* KVC相关 */,
 				F0EE805424566FDA00B4F264 /* 分类Category相关 */,
 				F05DD0AD2457BDBE006DE571 /* block相关 */,
+				F0B94A6D245A5C1000003376 /* Runtime相关 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -283,6 +294,36 @@
 				F0B7C52E244EDF780066546F /* XZQView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F0B94A6D245A5C1000003376 /* Runtime相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0B94A72245A5C4900003376 /* Runtime相关.md */,
+				F0B94A73245A7BF700003376 /* Model */,
+				F0B94A6E245A5C1E00003376 /* Controller */,
+				F0B94A6F245A5C3E00003376 /* RuntimeController.h */,
+				F0B94A70245A5C3E00003376 /* RuntimeController.m */,
+			);
+			path = "Runtime相关";
+			sourceTree = "<group>";
+		};
+		F0B94A6E245A5C1E00003376 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0B94A73245A7BF700003376 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0B94A74245A7C0A00003376 /* RuntimeModel.h */,
+				F0B94A75245A7C0A00003376 /* RuntimeModel.m */,
+				F0B94A77245A7EBF00003376 /* TargetModel.h */,
+				F0B94A78245A7EBF00003376 /* TargetModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F0BF3E53244FD03E0063B2B2 /* Animation动画 */ = {
@@ -512,10 +553,12 @@
 			files = (
 				F0E58E262455270100F77AAD /* KVCModel.m in Sources */,
 				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
+				F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */,
 				F0EE80742456AB4F00B4F264 /* UIViewController+BackItem.m in Sources */,
 				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
 				F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
+				F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
@@ -524,6 +567,7 @@
 				F0CF36E62459236400B55A23 /* BlockModel.m in Sources */,
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
+				F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
 				F0E58E222455178B00F77AAD /* KVCController.m in Sources */,
 				F0EE80692456872900B4F264 /* CategoryFirstModel+Two.m in Sources */,
