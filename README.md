@@ -45,3 +45,7 @@ iOS面试题分析
 代码：<br/>
 1）block变量捕获。<br/>
 2）block循环引用。<br/>
+
+### [Runtime相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/Runtime相关/Runtime相关.md)
+代码：<br/>
+消息发送、动态方法解析、消息转发。<br/>
