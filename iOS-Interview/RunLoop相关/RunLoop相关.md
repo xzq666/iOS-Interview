@@ -30,7 +30,6 @@ RunLoop只会运行在一个模式下，要切换模式，就要暂停当前模�
 
 4、RunLoop 的内部逻辑是怎么样的？<br/>
 RunLoop 内部就是一个函数，函数内部是一个 do-while 循环。当调用 CFRunLoopRun() 时，线程就会一直停留在这个循环里，直到超时或被手动停止，该函数才会返回。<br/>
-![avatar](https://upload-images.jianshu.io/upload_images/12311242-7d2c214d37c3d2ae.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200)<br/>
 1）通知 Observer 即将进入 RunLoop。<br/>
 2）通知 Observer 即将处理 Timer。<br/>
 3）通知 Observer 即将处理非基于端口的输入源（即将处理 Source0）。<br/>

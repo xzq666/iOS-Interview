@@ -49,3 +49,8 @@ iOS面试题分析
 ### [Runtime相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/Runtime相关/Runtime相关.md)
 代码：<br/>
 消息发送、动态方法解析、消息转发。<br/>
+
+### [RunLoop相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/RunLoop相关/RunLoop相关.md)
+代码：<br/>
+1）RunLoop状态监听。<br/>
+2）常驻线程封装。<br/>
