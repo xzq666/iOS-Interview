@@ -89,7 +89,7 @@
     NSThread *thread = [[NSThread alloc] initWithBlock:^{
         NSLog(@"1");
         // 需要开启RunLoop让线程永驻
-        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+//        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
     }];
     [thread start];
