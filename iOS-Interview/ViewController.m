@@ -18,6 +18,7 @@
 #import "BlockController.h"
 #import "RuntimeController.h"
 #import "RunLoopController.h"
+#import "MultiThreadController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -44,7 +45,7 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
@@ -55,7 +56,8 @@
                            @"分类Category相关面试题，包括分类的实现原理、加载过程等",
                            @"block相关面试题，例如block原理、__block修饰符、block循环引用等",
                            @"Runtime相关面试题，包括Runtime方法缓存、Runtime黑魔法等",
-                           @"RunLoop相关面试题，例如RunLoop的运行模式、常驻线程、RunLoop作用等"];
+                           @"RunLoop相关面试题，例如RunLoop的运行模式、常驻线程、RunLoop作用等",
+                           @"多线程相关面试题，例如多线程的概念、线程与进程的关系、多线程的优缺点等"];
     [self loadNewData:titles sub:subTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
@@ -155,6 +157,12 @@
             
         case 10: {
             RunLoopController *vc = [[RunLoopController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        case 11: {
+            MultiThreadController *vc = [[MultiThreadController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
