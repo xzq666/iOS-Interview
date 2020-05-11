@@ -54,3 +54,10 @@ iOS面试题分析
 代码：<br/>
 1）RunLoop状态监听。<br/>
 2）常驻线程封装。<br/>
+
+### [多线程相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/多线程相关/多线程相关.md)
+代码：<br/>
+1）GCD信号量应用：保持线程同步、为线程加锁。<br/>
+2）iOS中的锁的案例。<br/>
+3）读写锁实现多读单写。<br/>
+4）GCD栅栏函数实现多读单写。<br/>
