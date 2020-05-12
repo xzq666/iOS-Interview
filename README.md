@@ -61,3 +61,9 @@ iOS面试题分析
 2）iOS中的锁的案例。<br/>
 3）读写锁实现多读单写。<br/>
 4）GCD栅栏函数实现多读单写。<br/>
+
+### [内存管理相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/内存管理相关/内存管理相关.md)
+代码：<br/>
+1）NSCopying协议实现对象的copy。<br/>
+2）NSTimer、CADisplayLink循环引用解决。<br/>
+3）Tagged Point底层结构探索。<br/>
