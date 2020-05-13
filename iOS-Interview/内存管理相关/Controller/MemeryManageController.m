@@ -10,6 +10,8 @@
 #import "CopyModel.h"
 #import "XZQProxy.h"
 #import "XZQProxy2.h"
+#import <objc/runtime.h>
+#import <malloc/malloc.h>
 
 @interface MemeryManageController ()
 
@@ -25,11 +27,39 @@
     self.view.backgroundColor = [UIColor systemBackgroundColor];
     self.title = @"内存管理相关";
     
+    // 获得NSObject类的实例对象的成员变量所占用的大小
+    NSLog(@"-->%zd", class_getInstanceSize([NSObject class]));  // 8
+    // 获得obj指针所指向内存的大小
+    NSObject *obj = [[NSObject alloc] init];
+    NSLog(@"-->%zd", malloc_size((__bridge const void *)obj));  // 16
+    
 //    [self copyingTest];
 //    [self NSTimerTest];
 //    [self CADisplayLinkTest];
     
-    [self taggedPointerTest];
+//    [self taggedPointerTest];
+    
+    [self dictionaryCopyTest];
+}
+
+- (void)dictionaryCopyTest {
+    NSMutableDictionary *dict1 = [NSMutableDictionary dictionaryWithDictionary:@{@"name":@"xzq", @"age":@25}];
+    NSLog(@"dict1:%@", dict1);
+    
+    NSMutableDictionary *dict2 = [dict1 mutableCopy];
+    NSLog(@"dict2:%@", dict2);
+    
+    // 对于集合对象的深拷贝只是对对象本身，对象内部元素的拷贝是指针拷贝
+    NSLog(@"%p - %p", dict1, dict2);  // 深拷贝，指针不同
+    NSLog(@"%p - %p", dict1[@"name"], dict2[@"name"]);  // 指针相同
+    
+    dict1[@"name"] = @"qlh";
+    dict2[@"age"] = @24;
+    NSLog(@"dict1:%@", dict1);
+    NSLog(@"dict2:%@", dict2);
+    
+    NSLog(@"%p - %p", dict1[@"name"], dict2[@"name"]);  // 修改后指针不同
+    
 }
 
 extern uintptr_t objc_debug_taggedpointer_obfuscator;

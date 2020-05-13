@@ -300,9 +300,9 @@
 		F07E5896246A33C500BCC2F5 /* 内存管理相关 */ = {
 			isa = PBXGroup;
 			children = (
+				F07E589B246A35E500BCC2F5 /* 内存管理相关.md */,
 				F0171612246A89A3008DC9AC /* Model */,
 				F07E5897246A33DD00BCC2F5 /* Controller */,
-				F07E589B246A35E500BCC2F5 /* 内存管理相关.md */,
 			);
 			path = "内存管理相关";
 			sourceTree = "<group>";
@@ -443,8 +443,8 @@
 		F0D20FE62466394E00F22A52 /* 多线程相关 */ = {
 			isa = PBXGroup;
 			children = (
-				F0D20FE72466395700F22A52 /* Controller */,
 				F0D20FEB24663C2C00F22A52 /* 多线程相关.md */,
+				F0D20FE72466395700F22A52 /* Controller */,
 			);
 			path = "多线程相关";
 			sourceTree = "<group>";
