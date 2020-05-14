@@ -31,6 +31,23 @@
 		F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A70245A5C3E00003376 /* RuntimeController.m */; };
 		F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A75245A7C0A00003376 /* RuntimeModel.m */; };
 		F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A78245A7EBF00003376 /* TargetModel.m */; };
+		F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF298B246CD66E005118E0 /* InfrastructureController.m */; };
+		F0BF2993246CE175005118E0 /* MVCAppleController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF2992246CE175005118E0 /* MVCAppleController.m */; };
+		F0BF2996246CE1A1005118E0 /* MVCChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF2995246CE1A1005118E0 /* MVCChangeController.m */; };
+		F0BF2999246CE1BA005118E0 /* MVPController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF2998246CE1BA005118E0 /* MVPController.m */; };
+		F0BF299C246CE1D8005118E0 /* MVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF299B246CE1D8005118E0 /* MVVMController.m */; };
+		F0BF299F246CE3A4005118E0 /* MVCAppleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF299E246CE3A4005118E0 /* MVCAppleView.m */; };
+		F0BF29A5246CE4AA005118E0 /* MVCAppleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29A3246CE4AA005118E0 /* MVCAppleModel.m */; };
+		F0BF29A8246CE53C005118E0 /* MVCChangeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29A7246CE53C005118E0 /* MVCChangeModel.m */; };
+		F0BF29AB246CE54E005118E0 /* MVCChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29AA246CE54E005118E0 /* MVCChangeView.m */; };
+		F0BF29AE246CE662005118E0 /* MVPView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29AD246CE662005118E0 /* MVPView.m */; };
+		F0BF29B1246CE66E005118E0 /* MVPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29B0246CE66E005118E0 /* MVPModel.m */; };
+		F0BF29B4246CE67B005118E0 /* MVPPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29B3246CE67B005118E0 /* MVPPresent.m */; };
+		F0BF29B7246CE84E005118E0 /* MVVMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29B6246CE84E005118E0 /* MVVMModel.m */; };
+		F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29B9246CE85C005118E0 /* MVVMViewModel.m */; };
+		F0BF29BD246CE867005118E0 /* MVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29BC246CE867005118E0 /* MVVMView.m */; };
+		F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C0246CEA9F005118E0 /* NSObject+FBKVOController.m */; };
+		F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C1246CEA9F005118E0 /* FBKVOController.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
 		F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */; };
 		F0CF36E62459236400B55A23 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CF36E52459236400B55A23 /* BlockModel.m */; };
@@ -103,6 +120,41 @@
 		F0B94A75245A7C0A00003376 /* RuntimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeModel.m; sourceTree = "<group>"; };
 		F0B94A77245A7EBF00003376 /* TargetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
 		F0B94A78245A7EBF00003376 /* TargetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
+		F0BF2988246CD5ED005118E0 /* 项目架构与架构设计.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "项目架构与架构设计.md"; sourceTree = "<group>"; };
+		F0BF298A246CD66E005118E0 /* InfrastructureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfrastructureController.h; sourceTree = "<group>"; };
+		F0BF298B246CD66E005118E0 /* InfrastructureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfrastructureController.m; sourceTree = "<group>"; };
+		F0BF2991246CE175005118E0 /* MVCAppleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCAppleController.h; sourceTree = "<group>"; };
+		F0BF2992246CE175005118E0 /* MVCAppleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCAppleController.m; sourceTree = "<group>"; };
+		F0BF2994246CE1A1005118E0 /* MVCChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCChangeController.h; sourceTree = "<group>"; };
+		F0BF2995246CE1A1005118E0 /* MVCChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCChangeController.m; sourceTree = "<group>"; };
+		F0BF2997246CE1BA005118E0 /* MVPController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPController.h; sourceTree = "<group>"; };
+		F0BF2998246CE1BA005118E0 /* MVPController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPController.m; sourceTree = "<group>"; };
+		F0BF299A246CE1D8005118E0 /* MVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMController.h; sourceTree = "<group>"; };
+		F0BF299B246CE1D8005118E0 /* MVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMController.m; sourceTree = "<group>"; };
+		F0BF299D246CE3A4005118E0 /* MVCAppleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCAppleView.h; sourceTree = "<group>"; };
+		F0BF299E246CE3A4005118E0 /* MVCAppleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCAppleView.m; sourceTree = "<group>"; };
+		F0BF29A3246CE4AA005118E0 /* MVCAppleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCAppleModel.m; sourceTree = "<group>"; };
+		F0BF29A4246CE4AA005118E0 /* MVCAppleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCAppleModel.h; sourceTree = "<group>"; };
+		F0BF29A6246CE53C005118E0 /* MVCChangeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCChangeModel.h; sourceTree = "<group>"; };
+		F0BF29A7246CE53C005118E0 /* MVCChangeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCChangeModel.m; sourceTree = "<group>"; };
+		F0BF29A9246CE54E005118E0 /* MVCChangeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCChangeView.h; sourceTree = "<group>"; };
+		F0BF29AA246CE54E005118E0 /* MVCChangeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCChangeView.m; sourceTree = "<group>"; };
+		F0BF29AC246CE662005118E0 /* MVPView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPView.h; sourceTree = "<group>"; };
+		F0BF29AD246CE662005118E0 /* MVPView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPView.m; sourceTree = "<group>"; };
+		F0BF29AF246CE66E005118E0 /* MVPModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPModel.h; sourceTree = "<group>"; };
+		F0BF29B0246CE66E005118E0 /* MVPModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPModel.m; sourceTree = "<group>"; };
+		F0BF29B2246CE67B005118E0 /* MVPPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPPresent.h; sourceTree = "<group>"; };
+		F0BF29B3246CE67B005118E0 /* MVPPresent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPPresent.m; sourceTree = "<group>"; };
+		F0BF29B5246CE84E005118E0 /* MVVMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMModel.h; sourceTree = "<group>"; };
+		F0BF29B6246CE84E005118E0 /* MVVMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMModel.m; sourceTree = "<group>"; };
+		F0BF29B8246CE85C005118E0 /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
+		F0BF29B9246CE85C005118E0 /* MVVMViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
+		F0BF29BB246CE867005118E0 /* MVVMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMView.h; sourceTree = "<group>"; };
+		F0BF29BC246CE867005118E0 /* MVVMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMView.m; sourceTree = "<group>"; };
+		F0BF29BF246CEA9F005118E0 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		F0BF29C0246CEA9F005118E0 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		F0BF29C1246CEA9F005118E0 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		F0BF29C2246CEA9F005118E0 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
@@ -218,6 +270,7 @@
 				F0B0E0FA24625B7F00E2FFC5 /* RunLoop相关 */,
 				F0D20FE62466394E00F22A52 /* 多线程相关 */,
 				F07E5896246A33C500BCC2F5 /* 内存管理相关 */,
+				F0BF2987246CD592005118E0 /* 项目架构与架构设计 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -402,6 +455,96 @@
 				F0B94A78245A7EBF00003376 /* TargetModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0BF2987246CD592005118E0 /* 项目架构与架构设计 */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF2988246CD5ED005118E0 /* 项目架构与架构设计.md */,
+				F0BF298D246CDFF9005118E0 /* MVC-Apple */,
+				F0BF298E246CE001005118E0 /* MVC变种 */,
+				F0BF298F246CE010005118E0 /* MVP */,
+				F0BF2990246CE016005118E0 /* MVVM */,
+				F0BF2989246CD5FB005118E0 /* Controller */,
+			);
+			path = "项目架构与架构设计";
+			sourceTree = "<group>";
+		};
+		F0BF2989246CD5FB005118E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF298A246CD66E005118E0 /* InfrastructureController.h */,
+				F0BF298B246CD66E005118E0 /* InfrastructureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0BF298D246CDFF9005118E0 /* MVC-Apple */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF2991246CE175005118E0 /* MVCAppleController.h */,
+				F0BF2992246CE175005118E0 /* MVCAppleController.m */,
+				F0BF299D246CE3A4005118E0 /* MVCAppleView.h */,
+				F0BF299E246CE3A4005118E0 /* MVCAppleView.m */,
+				F0BF29A4246CE4AA005118E0 /* MVCAppleModel.h */,
+				F0BF29A3246CE4AA005118E0 /* MVCAppleModel.m */,
+			);
+			path = "MVC-Apple";
+			sourceTree = "<group>";
+		};
+		F0BF298E246CE001005118E0 /* MVC变种 */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF2994246CE1A1005118E0 /* MVCChangeController.h */,
+				F0BF2995246CE1A1005118E0 /* MVCChangeController.m */,
+				F0BF29A6246CE53C005118E0 /* MVCChangeModel.h */,
+				F0BF29A7246CE53C005118E0 /* MVCChangeModel.m */,
+				F0BF29A9246CE54E005118E0 /* MVCChangeView.h */,
+				F0BF29AA246CE54E005118E0 /* MVCChangeView.m */,
+			);
+			path = "MVC变种";
+			sourceTree = "<group>";
+		};
+		F0BF298F246CE010005118E0 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF2997246CE1BA005118E0 /* MVPController.h */,
+				F0BF2998246CE1BA005118E0 /* MVPController.m */,
+				F0BF29AC246CE662005118E0 /* MVPView.h */,
+				F0BF29AD246CE662005118E0 /* MVPView.m */,
+				F0BF29AF246CE66E005118E0 /* MVPModel.h */,
+				F0BF29B0246CE66E005118E0 /* MVPModel.m */,
+				F0BF29B2246CE67B005118E0 /* MVPPresent.h */,
+				F0BF29B3246CE67B005118E0 /* MVPPresent.m */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		F0BF2990246CE016005118E0 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF29BE246CEA9F005118E0 /* KVOController */,
+				F0BF299A246CE1D8005118E0 /* MVVMController.h */,
+				F0BF299B246CE1D8005118E0 /* MVVMController.m */,
+				F0BF29B5246CE84E005118E0 /* MVVMModel.h */,
+				F0BF29B6246CE84E005118E0 /* MVVMModel.m */,
+				F0BF29B8246CE85C005118E0 /* MVVMViewModel.h */,
+				F0BF29B9246CE85C005118E0 /* MVVMViewModel.m */,
+				F0BF29BB246CE867005118E0 /* MVVMView.h */,
+				F0BF29BC246CE867005118E0 /* MVVMView.m */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		F0BF29BE246CEA9F005118E0 /* KVOController */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF29BF246CEA9F005118E0 /* FBKVOController.h */,
+				F0BF29C1246CEA9F005118E0 /* FBKVOController.m */,
+				F0BF29C0246CEA9F005118E0 /* NSObject+FBKVOController.m */,
+				F0BF29C2246CEA9F005118E0 /* NSObject+FBKVOController.h */,
+			);
+			path = KVOController;
 			sourceTree = "<group>";
 		};
 		F0BF3E53244FD03E0063B2B2 /* Animation动画 */ = {
@@ -657,39 +800,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E58E262455270100F77AAD /* KVCModel.m in Sources */,
+				F0BF299C246CE1D8005118E0 /* MVVMController.m in Sources */,
+				F0BF29AB246CE54E005118E0 /* MVCChangeView.m in Sources */,
 				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
+				F0BF29A5246CE4AA005118E0 /* MVCAppleModel.m in Sources */,
 				F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */,
+				F0BF299F246CE3A4005118E0 /* MVCAppleView.m in Sources */,
+				F0BF29A8246CE53C005118E0 /* MVCChangeModel.m in Sources */,
 				F0171618246A975B008DC9AC /* XZQProxy.m in Sources */,
+				F0BF29B4246CE67B005118E0 /* MVPPresent.m in Sources */,
 				F0EE80742456AB4F00B4F264 /* UIViewController+BackItem.m in Sources */,
 				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
+				F0BF29BD246CE867005118E0 /* MVVMView.m in Sources */,
 				F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */,
 				F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
+				F0BF29B7246CE84E005118E0 /* MVVMModel.m in Sources */,
 				F0D20FEA2466398500F22A52 /* MultiThreadController.m in Sources */,
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
 				F07E589A246A340600BCC2F5 /* MemeryManageController.m in Sources */,
 				F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */,
 				F0EE806F24568E2C00B4F264 /* CategoryFirstSubModel+One.m in Sources */,
+				F0BF29AE246CE662005118E0 /* MVPView.m in Sources */,
 				F0CF36E62459236400B55A23 /* BlockModel.m in Sources */,
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
 				F0171615246A89BD008DC9AC /* CopyModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
+				F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */,
 				F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
+				F0BF2996246CE1A1005118E0 /* MVCChangeController.m in Sources */,
 				F0E58E222455178B00F77AAD /* KVCController.m in Sources */,
 				F0EE80692456872900B4F264 /* CategoryFirstModel+Two.m in Sources */,
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
+				F0BF2993246CE175005118E0 /* MVCAppleController.m in Sources */,
 				F0EE80662456872000B4F264 /* CategoryFirstModel+One.m in Sources */,
 				F017161B246A987B008DC9AC /* XZQProxy2.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,
 				F0EE80592456702100B4F264 /* CategoryController.m in Sources */,
 				F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */,
 				F0B0E0FE24625BA700E2FFC5 /* RunLoopController.m in Sources */,
+				F0BF29B1246CE66E005118E0 /* MVPModel.m in Sources */,
+				F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */,
+				F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */,
+				F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */,
 				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
 				F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */,
+				F0BF2999246CE1BA005118E0 /* MVPController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
