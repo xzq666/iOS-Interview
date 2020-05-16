@@ -67,3 +67,9 @@ iOS面试题分析
 1）NSCopying协议实现对象的copy。<br/>
 2）NSTimer、CADisplayLink循环引用解决。<br/>
 3）Tagged Point底层结构探索。<br/>
+
+### [项目架构与架构设计](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/项目架构与架构设计/项目架构与架构设计.md)
+代码：<br/>
+MVC-Apple、MVC变种、MVP、MVVM简单案例。<br/>
+
+### [性能优化相关](https://github.com/xzq666/iOS-Interview/blob/master/iOS-Interview/性能优化相关/性能优化相关.md)
