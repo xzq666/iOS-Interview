@@ -49,6 +49,7 @@
 		F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C0246CEA9F005118E0 /* NSObject+FBKVOController.m */; };
 		F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C1246CEA9F005118E0 /* FBKVOController.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
+		F0C54989246E2308000BFCD0 /* PerformsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C54988246E2308000BFCD0 /* PerformsController.m */; };
 		F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */; };
 		F0CF36E62459236400B55A23 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CF36E52459236400B55A23 /* BlockModel.m */; };
 		F0D20FEA2466398500F22A52 /* MultiThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D20FE92466398500F22A52 /* MultiThreadController.m */; };
@@ -158,6 +159,9 @@
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		F0C54985246E22D3000BFCD0 /* 性能优化相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化相关.md"; sourceTree = "<group>"; };
+		F0C54987246E2308000BFCD0 /* PerformsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformsController.h; sourceTree = "<group>"; };
+		F0C54988246E2308000BFCD0 /* PerformsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformsController.m; sourceTree = "<group>"; };
 		F0C81CB92463B80F00244FBD /* XZQPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPermenantThread.h; sourceTree = "<group>"; };
 		F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPermenantThread.m; sourceTree = "<group>"; };
 		F0CF36E42459236400B55A23 /* BlockModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockModel.h; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				F0D20FE62466394E00F22A52 /* 多线程相关 */,
 				F07E5896246A33C500BCC2F5 /* 内存管理相关 */,
 				F0BF2987246CD592005118E0 /* 项目架构与架构设计 */,
+				F0C54984246E22BD000BFCD0 /* 性能优化相关 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -565,6 +570,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F0C54984246E22BD000BFCD0 /* 性能优化相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0C54985246E22D3000BFCD0 /* 性能优化相关.md */,
+				F0C54986246E22DD000BFCD0 /* Controller */,
+			);
+			path = "性能优化相关";
+			sourceTree = "<group>";
+		};
+		F0C54986246E22DD000BFCD0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0C54987246E2308000BFCD0 /* PerformsController.h */,
+				F0C54988246E2308000BFCD0 /* PerformsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F0C81CB82463B7EE00244FBD /* 线程保活(常驻线程) */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +855,7 @@
 				F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */,
 				F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
+				F0C54989246E2308000BFCD0 /* PerformsController.m in Sources */,
 				F0BF2996246CE1A1005118E0 /* MVCChangeController.m in Sources */,
 				F0E58E222455178B00F77AAD /* KVCController.m in Sources */,
 				F0EE80692456872900B4F264 /* CategoryFirstModel+Two.m in Sources */,
@@ -992,6 +1016,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1010,6 +1036,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -21,6 +21,7 @@
 #import "MultiThreadController.h"
 #import "MemeryManageController.h"
 #import "InfrastructureController.h"
+#import "PerformsController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -47,7 +48,7 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
@@ -61,7 +62,8 @@
                            @"RunLoop相关面试题，例如RunLoop的运行模式、常驻线程、RunLoop作用等",
                            @"多线程相关面试题，例如多线程的概念、线程与进程的关系、多线程的优缺点等",
                            @"内存管理相关面试题，例如iOS内存分区、内存管理方式等",
-                           @"项目架构与架构设计相关面试题，包括MVC、MVVM、MVP、RAC以及单例模式、工厂模式等"];
+                           @"项目架构与架构设计相关面试题，包括MVC、MVVM、MVP、RAC以及单例模式、工厂模式等",
+                           @"性能优化相关面试题，包括tableView滑动卡顿优化、APP启动时间优化等"];
     [self loadNewData:titles sub:subTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
@@ -181,6 +183,11 @@
             InfrastructureController *vc = [[InfrastructureController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
+        }
+            
+        case 14: {
+            PerformsController *vc = [[PerformsController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             
         default:
