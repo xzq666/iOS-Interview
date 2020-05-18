@@ -21,6 +21,8 @@
 		F0244AEC244EA1E300897508 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0244AEB244EA1E300897508 /* README.md */; };
 		F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F888A245273FD008C1E95 /* OCLanguageController.m */; };
 		F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F889024528AB4008C1E95 /* MessagePassController.m */; };
+		F048B86024721B24001BA522 /* DataSafeEncryptController.m in Sources */ = {isa = PBXBuildFile; fileRef = F048B85F24721B24001BA522 /* DataSafeEncryptController.m */; };
+		F048B86624722AD9001BA522 /* DebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = F048B86524722AD9001BA522 /* DebugController.m */; };
 		F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05DD0B12457BDF7006DE571 /* BlockController.m */; };
 		F07E589A246A340600BCC2F5 /* MemeryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E5899246A340600BCC2F5 /* MemeryManageController.m */; };
 		F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A126C1245134130001F8D7 /* OCGroundController.m */; };
@@ -51,6 +53,7 @@
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
 		F0C54989246E2308000BFCD0 /* PerformsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C54988246E2308000BFCD0 /* PerformsController.m */; };
 		F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */; };
+		F0C952DE246F99D5001D8AF9 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C952DD246F99D5001D8AF9 /* ImageController.m */; };
 		F0CF36E62459236400B55A23 /* BlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CF36E52459236400B55A23 /* BlockModel.m */; };
 		F0D20FEA2466398500F22A52 /* MultiThreadController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D20FE92466398500F22A52 /* MultiThreadController.m */; };
 		F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E58E1B245516FD00F77AAD /* KVOController.m */; };
@@ -95,6 +98,12 @@
 		F03F888E24528A8F008C1E95 /* 消息传递方式.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "消息传递方式.md"; sourceTree = "<group>"; };
 		F03F888F24528AB4008C1E95 /* MessagePassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePassController.h; sourceTree = "<group>"; };
 		F03F889024528AB4008C1E95 /* MessagePassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagePassController.m; sourceTree = "<group>"; };
+		F048B85D24721AEF001BA522 /* 数据安全与加密.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "数据安全与加密.md"; sourceTree = "<group>"; };
+		F048B85E24721B24001BA522 /* DataSafeEncryptController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSafeEncryptController.h; sourceTree = "<group>"; };
+		F048B85F24721B24001BA522 /* DataSafeEncryptController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSafeEncryptController.m; sourceTree = "<group>"; };
+		F048B86324722428001BA522 /* iOS调试技巧.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS调试技巧.md"; sourceTree = "<group>"; };
+		F048B86424722AD9001BA522 /* DebugController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugController.h; sourceTree = "<group>"; };
+		F048B86524722AD9001BA522 /* DebugController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugController.m; sourceTree = "<group>"; };
 		F05DD0AE2457BDD8006DE571 /* block相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "block相关.md"; sourceTree = "<group>"; };
 		F05DD0B02457BDF7006DE571 /* BlockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockController.h; sourceTree = "<group>"; };
 		F05DD0B12457BDF7006DE571 /* BlockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockController.m; sourceTree = "<group>"; };
@@ -164,6 +173,9 @@
 		F0C54988246E2308000BFCD0 /* PerformsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformsController.m; sourceTree = "<group>"; };
 		F0C81CB92463B80F00244FBD /* XZQPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPermenantThread.h; sourceTree = "<group>"; };
 		F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPermenantThread.m; sourceTree = "<group>"; };
+		F0C952DB246F916D001D8AF9 /* 图像处理相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "图像处理相关.md"; sourceTree = "<group>"; };
+		F0C952DC246F99D5001D8AF9 /* ImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
+		F0C952DD246F99D5001D8AF9 /* ImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
 		F0CF36E42459236400B55A23 /* BlockModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockModel.h; sourceTree = "<group>"; };
 		F0CF36E52459236400B55A23 /* BlockModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockModel.m; sourceTree = "<group>"; };
 		F0D20FE82466398500F22A52 /* MultiThreadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadController.h; sourceTree = "<group>"; };
@@ -276,6 +288,9 @@
 				F07E5896246A33C500BCC2F5 /* 内存管理相关 */,
 				F0BF2987246CD592005118E0 /* 项目架构与架构设计 */,
 				F0C54984246E22BD000BFCD0 /* 性能优化相关 */,
+				F0C952D9246F9154001D8AF9 /* 图像处理相关 */,
+				F048B85B24721AC7001BA522 /* 数据安全与加密 */,
+				F048B861247221F7001BA522 /* iOS调试技巧 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -332,6 +347,42 @@
 			children = (
 				F03F888F24528AB4008C1E95 /* MessagePassController.h */,
 				F03F889024528AB4008C1E95 /* MessagePassController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F048B85B24721AC7001BA522 /* 数据安全与加密 */ = {
+			isa = PBXGroup;
+			children = (
+				F048B85D24721AEF001BA522 /* 数据安全与加密.md */,
+				F048B85C24721ADA001BA522 /* Controller */,
+			);
+			path = "数据安全与加密";
+			sourceTree = "<group>";
+		};
+		F048B85C24721ADA001BA522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F048B85E24721B24001BA522 /* DataSafeEncryptController.h */,
+				F048B85F24721B24001BA522 /* DataSafeEncryptController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F048B861247221F7001BA522 /* iOS调试技巧 */ = {
+			isa = PBXGroup;
+			children = (
+				F048B86324722428001BA522 /* iOS调试技巧.md */,
+				F048B86224722416001BA522 /* Controller */,
+			);
+			path = "iOS调试技巧";
+			sourceTree = "<group>";
+		};
+		F048B86224722416001BA522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F048B86424722AD9001BA522 /* DebugController.h */,
+				F048B86524722AD9001BA522 /* DebugController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,6 +648,24 @@
 			path = "线程保活(常驻线程)";
 			sourceTree = "<group>";
 		};
+		F0C952D9246F9154001D8AF9 /* 图像处理相关 */ = {
+			isa = PBXGroup;
+			children = (
+				F0C952DB246F916D001D8AF9 /* 图像处理相关.md */,
+				F0C952DA246F915E001D8AF9 /* Controller */,
+			);
+			path = "图像处理相关";
+			sourceTree = "<group>";
+		};
+		F0C952DA246F915E001D8AF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0C952DC246F99D5001D8AF9 /* ImageController.h */,
+				F0C952DD246F99D5001D8AF9 /* ImageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F0CF36E32459235300B55A23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,6 +893,7 @@
 			files = (
 				F0E58E262455270100F77AAD /* KVCModel.m in Sources */,
 				F0BF299C246CE1D8005118E0 /* MVVMController.m in Sources */,
+				F048B86024721B24001BA522 /* DataSafeEncryptController.m in Sources */,
 				F0BF29AB246CE54E005118E0 /* MVCChangeView.m in Sources */,
 				F0B7C528244ECAC50066546F /* UIController.m in Sources */,
 				F0BF29A5246CE4AA005118E0 /* MVCAppleModel.m in Sources */,
@@ -839,6 +909,7 @@
 				F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */,
+				F0C952DE246F99D5001D8AF9 /* ImageController.m in Sources */,
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
 				F0BF29B7246CE84E005118E0 /* MVVMModel.m in Sources */,
@@ -867,6 +938,7 @@
 				F0EE80592456702100B4F264 /* CategoryController.m in Sources */,
 				F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */,
 				F0B0E0FE24625BA700E2FFC5 /* RunLoopController.m in Sources */,
+				F048B86624722AD9001BA522 /* DebugController.m in Sources */,
 				F0BF29B1246CE66E005118E0 /* MVPModel.m in Sources */,
 				F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */,
 				F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */,
