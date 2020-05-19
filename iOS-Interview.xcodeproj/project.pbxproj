@@ -30,6 +30,7 @@
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
 		F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52B244EDB2C0066546F /* XZQButton.m */; };
 		F0B7C52F244EDF780066546F /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C52E244EDF780066546F /* XZQView.m */; };
+		F0B8C89224736A0E00C90910 /* CodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B8C89124736A0E00C90910 /* CodeController.m */; };
 		F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A70245A5C3E00003376 /* RuntimeController.m */; };
 		F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A75245A7C0A00003376 /* RuntimeModel.m */; };
 		F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A78245A7EBF00003376 /* TargetModel.m */; };
@@ -123,6 +124,9 @@
 		F0B7C52B244EDB2C0066546F /* XZQButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQButton.m; sourceTree = "<group>"; };
 		F0B7C52D244EDF780066546F /* XZQView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQView.h; sourceTree = "<group>"; };
 		F0B7C52E244EDF780066546F /* XZQView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQView.m; sourceTree = "<group>"; };
+		F0B8C88F247369F700C90910 /* 源码理解.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "源码理解.md"; sourceTree = "<group>"; };
+		F0B8C89024736A0E00C90910 /* CodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeController.h; sourceTree = "<group>"; };
+		F0B8C89124736A0E00C90910 /* CodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeController.m; sourceTree = "<group>"; };
 		F0B94A6F245A5C3E00003376 /* RuntimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeController.h; sourceTree = "<group>"; };
 		F0B94A70245A5C3E00003376 /* RuntimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeController.m; sourceTree = "<group>"; };
 		F0B94A72245A5C4900003376 /* Runtime相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Runtime相关.md"; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				F0C952D9246F9154001D8AF9 /* 图像处理相关 */,
 				F048B85B24721AC7001BA522 /* 数据安全与加密 */,
 				F048B861247221F7001BA522 /* iOS调试技巧 */,
+				F0B8C88D247369D600C90910 /* 源码理解 */,
 				F0244AD2244EA03200897508 /* AppDelegate.h */,
 				F0244AD3244EA03200897508 /* AppDelegate.m */,
 				F0244AD5244EA03200897508 /* SceneDelegate.h */,
@@ -481,6 +486,24 @@
 				F0B7C52E244EDF780066546F /* XZQView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F0B8C88D247369D600C90910 /* 源码理解 */ = {
+			isa = PBXGroup;
+			children = (
+				F0B8C88F247369F700C90910 /* 源码理解.md */,
+				F0B8C88E247369E000C90910 /* Controller */,
+			);
+			path = "源码理解";
+			sourceTree = "<group>";
+		};
+		F0B8C88E247369E000C90910 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0B8C89024736A0E00C90910 /* CodeController.h */,
+				F0B8C89124736A0E00C90910 /* CodeController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F0B94A6D245A5C1000003376 /* Runtime相关 */ = {
@@ -941,6 +964,7 @@
 				F048B86624722AD9001BA522 /* DebugController.m in Sources */,
 				F0BF29B1246CE66E005118E0 /* MVPModel.m in Sources */,
 				F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */,
+				F0B8C89224736A0E00C90910 /* CodeController.m in Sources */,
 				F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */,
 				F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */,
 				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
