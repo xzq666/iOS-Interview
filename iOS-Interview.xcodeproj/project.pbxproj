@@ -52,6 +52,7 @@
 		F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C0246CEA9F005118E0 /* NSObject+FBKVOController.m */; };
 		F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF29C1246CEA9F005118E0 /* FBKVOController.m */; };
 		F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF3E57244FD60C0063B2B2 /* AnimationController.m */; };
+		F0C1E3C824BC388700DB98B2 /* XZQLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C1E3C724BC388700DB98B2 /* XZQLagMonitor.m */; };
 		F0C54989246E2308000BFCD0 /* PerformsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C54988246E2308000BFCD0 /* PerformsController.m */; };
 		F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C81CBA2463B80F00244FBD /* XZQPermenantThread.m */; };
 		F0C952DE246F99D5001D8AF9 /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C952DD246F99D5001D8AF9 /* ImageController.m */; };
@@ -172,6 +173,8 @@
 		F0BF3E54244FD05A0063B2B2 /* Animation动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Animation动画.md"; sourceTree = "<group>"; };
 		F0BF3E56244FD60C0063B2B2 /* AnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationController.h; sourceTree = "<group>"; };
 		F0BF3E57244FD60C0063B2B2 /* AnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationController.m; sourceTree = "<group>"; };
+		F0C1E3C624BC388700DB98B2 /* XZQLagMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQLagMonitor.h; sourceTree = "<group>"; };
+		F0C1E3C724BC388700DB98B2 /* XZQLagMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQLagMonitor.m; sourceTree = "<group>"; };
 		F0C54985246E22D3000BFCD0 /* 性能优化相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化相关.md"; sourceTree = "<group>"; };
 		F0C54987246E2308000BFCD0 /* PerformsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformsController.h; sourceTree = "<group>"; };
 		F0C54988246E2308000BFCD0 /* PerformsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformsController.m; sourceTree = "<group>"; };
@@ -644,6 +647,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F0C1E3C524BC384500DB98B2 /* 卡顿监控 */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1E3C624BC388700DB98B2 /* XZQLagMonitor.h */,
+				F0C1E3C724BC388700DB98B2 /* XZQLagMonitor.m */,
+			);
+			path = "卡顿监控";
+			sourceTree = "<group>";
+		};
 		F0C54984246E22BD000BFCD0 /* 性能优化相关 */ = {
 			isa = PBXGroup;
 			children = (
@@ -803,6 +815,7 @@
 		F0EE80702456AB3300B4F264 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F0C1E3C524BC384500DB98B2 /* 卡顿监控 */,
 				F0EE80712456AB3A00B4F264 /* Category */,
 			);
 			path = Utils;
@@ -956,6 +969,7 @@
 				F0244AD4244EA03200897508 /* AppDelegate.m in Sources */,
 				F0BF2993246CE175005118E0 /* MVCAppleController.m in Sources */,
 				F0EE80662456872000B4F264 /* CategoryFirstModel+One.m in Sources */,
+				F0C1E3C824BC388700DB98B2 /* XZQLagMonitor.m in Sources */,
 				F017161B246A987B008DC9AC /* XZQProxy2.m in Sources */,
 				F0244AE5244EA03400897508 /* main.m in Sources */,
 				F0EE80592456702100B4F264 /* CategoryController.m in Sources */,
@@ -1112,6 +1126,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";
@@ -1132,6 +1147,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";

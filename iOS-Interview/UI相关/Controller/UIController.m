@@ -22,7 +22,38 @@
     self.title = @"UI相关";
     self.view.backgroundColor = [UIColor systemBackgroundColor];
     
-    [self hitResponsePass];
+//    [self hitResponsePass];
+    
+//    UIGraphicsBeginImageContextWithOptions(CGSizeMake(45, 45), YES, [UIScreen mainScreen].scale);
+//    CGContextRef ctx = UIGraphicsGetCurrentContext();
+//    CGContextBeginPath(ctx);
+//    CGContextMoveToPoint(ctx, 16.72, 107.22);
+//    CGContextAddLineToPoint(ctx, 3.29, 20.83);
+//    CGContextClosePath(ctx);
+//    CGContextSetLineWidth(ctx, 1);
+//    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+//    CGContextStrokePath(ctx);
+//    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, 45, 45)];
+//    img.image = UIGraphicsGetImageFromCurrentImageContext();
+//    [self.view addSubview:img];
+//    UIGraphicsEndImageContext();
+
+    UIImage *image = [UIImage imageNamed:@"female_icon"];
+    
+    CALayer *mainLayer = [CALayer layer];
+    mainLayer.frame = CGRectMake(100, 100, image.size.width, image.size.height);
+    mainLayer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    [self.view.layer addSublayer:mainLayer];
+    
+    CALayer *contentLayer = [CALayer layer];
+    contentLayer.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    contentLayer.contents = (__bridge id)image.CGImage;
+    // kCAGravityResizeAspect
+    contentLayer.contentsGravity = kCAGravityCenter;
+    contentLayer.contentsScale = image.scale;
+    contentLayer.masksToBounds = YES;
+    contentLayer.contentsRect = CGRectMake(0, 0, 1.0, 0.5);
+    [mainLayer addSublayer:contentLayer];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
