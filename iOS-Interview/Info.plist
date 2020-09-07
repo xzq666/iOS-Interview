@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>App需要获取您的日历权限来提箱您一些及时操作</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>App需要获取您的提醒事项来为您添加一些提醒</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

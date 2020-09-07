@@ -22,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    };
     self.title = @"项目架构与架构设计";
     
     self.dataSource = @[@"MVC-Apple", @"MVC变种", @"MVP", @"MVVM"];

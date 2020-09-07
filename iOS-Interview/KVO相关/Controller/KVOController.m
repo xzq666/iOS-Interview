@@ -18,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor systemBackgroundColor];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    };
     self.title = @"KVO相关";
     
     NSLog(@"添加KVO前-->%s", object_getClassName(self));  // KVOController

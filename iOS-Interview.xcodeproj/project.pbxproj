@@ -11,6 +11,7 @@
 		F0171615246A89BD008DC9AC /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0171614246A89BD008DC9AC /* CopyModel.m */; };
 		F0171618246A975B008DC9AC /* XZQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0171617246A975B008DC9AC /* XZQProxy.m */; };
 		F017161B246A987B008DC9AC /* XZQProxy2.m in Sources */ = {isa = PBXBuildFile; fileRef = F017161A246A987B008DC9AC /* XZQProxy2.m */; };
+		F020906024FF90440075D9C0 /* CalenderEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = F020905F24FF90440075D9C0 /* CalenderEventController.m */; };
 		F0244AD4244EA03200897508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AD3244EA03200897508 /* AppDelegate.m */; };
 		F0244AD7244EA03200897508 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AD6244EA03200897508 /* SceneDelegate.m */; };
 		F0244ADA244EA03200897508 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AD9244EA03200897508 /* ViewController.m */; };
@@ -81,6 +82,8 @@
 		F0171617246A975B008DC9AC /* XZQProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQProxy.m; sourceTree = "<group>"; };
 		F0171619246A987B008DC9AC /* XZQProxy2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQProxy2.h; sourceTree = "<group>"; };
 		F017161A246A987B008DC9AC /* XZQProxy2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQProxy2.m; sourceTree = "<group>"; };
+		F020905E24FF90440075D9C0 /* CalenderEventController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalenderEventController.h; sourceTree = "<group>"; };
+		F020905F24FF90440075D9C0 /* CalenderEventController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalenderEventController.m; sourceTree = "<group>"; };
 		F0244ACF244EA03200897508 /* iOS-Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Interview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0244AD2244EA03200897508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0244AD3244EA03200897508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -257,6 +260,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F020905C24FF90190075D9C0 /* 日历和提醒事项 */ = {
+			isa = PBXGroup;
+			children = (
+				F020905D24FF902A0075D9C0 /* Controller */,
+			);
+			path = "日历和提醒事项";
+			sourceTree = "<group>";
+		};
+		F020905D24FF902A0075D9C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F020905E24FF90440075D9C0 /* CalenderEventController.h */,
+				F020905F24FF90440075D9C0 /* CalenderEventController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F0244AC6244EA03200897508 = {
 			isa = PBXGroup;
 			children = (
@@ -279,11 +299,11 @@
 		F0244AD1244EA03200897508 /* iOS-Interview */ = {
 			isa = PBXGroup;
 			children = (
+				F020905C24FF90190075D9C0 /* 日历和提醒事项 */,
 				F0EE80702456AB3300B4F264 /* Utils */,
 				F0B7C523244EBE920066546F /* UI相关 */,
 				F0BF3E53244FD03E0063B2B2 /* Animation动画 */,
 				F0A126BE245129860001F8D7 /* OC对象底层 */,
-				F03F8885245273A5008C1E95 /* OC语言 */,
 				F03F888C24528A6F008C1E95 /* 消息传递方式 */,
 				F0E58E17245516BC00F77AAD /* KVO相关 */,
 				F0E58E1D2455175F00F77AAD /* KVC相关 */,
@@ -476,6 +496,7 @@
 			children = (
 				F0B7C526244ECAC50066546F /* UIController.h */,
 				F0B7C527244ECAC50066546F /* UIController.m */,
+				F03F8885245273A5008C1E95 /* OC语言 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -959,6 +980,7 @@
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
 				F0171615246A89BD008DC9AC /* CopyModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
+				F020906024FF90440075D9C0 /* CalenderEventController.m in Sources */,
 				F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */,
 				F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
@@ -1130,6 +1152,7 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1151,6 +1174,7 @@
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				INFOPLIST_FILE = "iOS-Interview/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
