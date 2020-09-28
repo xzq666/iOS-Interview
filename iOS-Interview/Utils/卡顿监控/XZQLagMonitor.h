@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)beginMoitor;  // 开始监视卡顿
 - (void)endMonitor;  // 停止监视卡顿
 
+- (void)printLogTrace;  // 打印卡顿堆栈
+
 @end
 
 NS_ASSUME_NONNULL_END

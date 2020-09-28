@@ -24,7 +24,31 @@
     };
     self.title = @"block相关";
     
-    [self blockCatchVariable];
+//    [self blockCatchVariable];
+    [self test];
+}
+
+- (void)test {
+    __block BlockModel *model = [[BlockModel alloc] init];
+    model.age = 25;
+    BlockModel *model2 = [[BlockModel alloc] init];
+    model2.age = 25;
+    NSInteger (^block4)(NSInteger) = ^NSInteger(NSInteger n) {
+        model.age = 26;
+        model2.age = 26;
+        NSLog(@"p3-->%zd", model.age);
+        NSLog(@"p4-->%zd", model2.age);
+        
+        model = nil;
+//        model2 = nil;
+        NSLog(@"p3-->%@", model);
+        NSLog(@"p4-->%@", model2);
+        return 1;
+    };
+    block4(1);
+    NSLog(@"%@", [block4 class]);
+    NSLog(@"out p3-->%@", model);
+    NSLog(@"out p4-->%@", model2);
 }
 
 - (void)blockTest {
@@ -78,9 +102,12 @@ NSMutableArray *k3;
     __block NSInteger p1 = 2;
     __block NSInteger p2 = 2;
     __block NSMutableArray *p3 = [NSMutableArray arrayWithObjects:@"1", @"2", nil];
+    NSMutableArray *p4 = [NSMutableArray arrayWithObjects:@"1", @"2", nil];
     NSInteger (^block4)(NSInteger) = ^NSInteger(NSInteger n) {
         p1 = 3;  // 被__block修饰的局部变量在block内部可以修改
         NSLog(@"%@", p3);
+        [p3 replaceObjectAtIndex:0 withObject:@"4"];
+        [p4 replaceObjectAtIndex:0 withObject:@"4"];
         return (p1 + p2) * n;
     };
     p2 = 6;  // 被__block修饰的局部变量在block外部修改会影响block内部
@@ -97,9 +124,24 @@ NSMutableArray *k3;
     __weak typeof(model) weakModel = model;
     model.block = ^NSInteger(NSInteger n) {
         NSLog(@"before age: %zd", weakModel.age);
-        return model.age + n;
+        weakModel.age += n;
+        return weakModel.age;
     };
+    
+    BlockModel __block *model2 = [[BlockModel alloc] init];
+    model2.age = 25;
+    __weak typeof(model2) weakModel2 = model2;
+    model2.block = ^NSInteger(NSInteger n) {
+        NSLog(@"before age: %zd", weakModel2.age);
+        weakModel2.age += n;
+        return weakModel2.age;
+    };
+    
     NSLog(@"%zd", model.block(2));
+    NSLog(@"%zd", model.age);
+    
+    NSLog(@"%zd", model2.block(2));
+    NSLog(@"%zd", model2.age);
 }
 
 @end

@@ -27,10 +27,12 @@
 #import "DebugController.h"
 #import "CodeController.h"
 #import "CalenderEventController.h"
+#import "RunLoopWatchCatonController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
 @property(nonatomic,copy) NSString *subTitle;
+@property(nonatomic,copy) NSString *controllerName;
 @end
 @implementation Module
 @end
@@ -64,7 +66,7 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
@@ -84,18 +86,21 @@
                            @"数据安全与加密相关面试题，包括对称加密与不对称加密、iOS签名机制等",
                            @"iOS调试技巧相关面试题，包括LLDB常用命令、断点调试等",
                            @"源码理解相关面试题，包括SDWebImage、AFNetworking等",
-                           @"用Eventkit向日历和提醒事项中加入事件和闹铃"
+                           @"用Eventkit向日历和提醒事项中加入事件和闹铃",
+                           @"使用RunLoop进行实时卡顿监控测试"
     ];
-    [self loadNewData:titles sub:subTitles];
+    NSArray *controllerTitles = @[@"UIController", @"AnimationController", @"OCGroundController", @"OCLanguageController", @"MessagePassController", @"KVOController", @"KVCController", @"CategoryController", @"BlockController", @"RuntimeController", @"RunLoopController", @"MultiThreadController", @"MemeryManageController", @"InfrastructureController", @"PerformsController", @"ImageController", @"DataSafeEncryptController", @"DebugController", @"CodeController", @"CalenderEventController", @"RunLoopWatchCatonController"];
+    [self loadNewData:titles sub:subTitles controllerNames:controllerTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
 }
 
-- (void)loadNewData:(NSArray *)titles sub:(NSArray *)subTitles {
+- (void)loadNewData:(NSArray *)titles sub:(NSArray *)subTitles controllerNames:(NSArray *)controllerNames {
     for (int i = 0; i < titles.count; i++) {
         Module *model = [[Module alloc] init];
         model.title = titles[i];
         model.subTitle = subTitles[i];
+        model.controllerName = controllerNames[i];
         [self.dataSource addObject:model];
     }
 }
@@ -117,134 +122,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    switch (indexPath.row) {
-        case 0: {
-            UIController *vc = [[UIController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 1: {
-            AnimationController *vc = [[AnimationController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 2: {
-            OCGroundController *vc = [[OCGroundController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 3: {
-            OCLanguageController *vc = [[OCLanguageController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 4: {
-            MessagePassController *vc = [[MessagePassController alloc] init];
-            vc.delegate = self;
-            vc.block = ^(NSString *param1, NSString * param2) {
-                NSString *value = [NSString stringWithFormat:@"%@ - %@", param1, param2];
-                NSLog(@"获取到block返回过来的页面值：%@", value);
-            };
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 5: {
-            KVOController *vc = [[KVOController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 6: {
-            KVCController *vc = [[KVCController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 7: {
-            CategoryController *vc = [[CategoryController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 8: {
-            BlockController *vc = [[BlockController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 9: {
-            RuntimeController *vc = [[RuntimeController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 10: {
-            RunLoopController *vc = [[RunLoopController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 11: {
-            MultiThreadController *vc = [[MultiThreadController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 12: {
-            MemeryManageController *vc = [[MemeryManageController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 13: {
-            InfrastructureController *vc = [[InfrastructureController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 14: {
-            PerformsController *vc = [[PerformsController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 15: {
-            ImageController *vc = [[ImageController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 16: {
-            DataSafeEncryptController *vc = [[DataSafeEncryptController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 17: {
-            DebugController *vc = [[DebugController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 18: {
-            CodeController *vc = [[CodeController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        case 19: {
-            CalenderEventController *vc = [[CalenderEventController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-            
-        default:
-            break;
+    Module *model = self.dataSource[indexPath.row];
+    if (indexPath.row == 4) {
+        MessagePassController *vc = [[NSClassFromString(model.controllerName) alloc] init];
+        vc.delegate = self;
+        vc.block = ^(NSString *param1, NSString * param2) {
+            NSString *value = [NSString stringWithFormat:@"%@ - %@", param1, param2];
+            NSLog(@"获取到block返回过来的页面值：%@", value);
+        };
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        UIViewController *vc = [[NSClassFromString(model.controllerName) alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

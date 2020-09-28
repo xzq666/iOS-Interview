@@ -35,6 +35,7 @@
 		F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A70245A5C3E00003376 /* RuntimeController.m */; };
 		F0B94A76245A7C0A00003376 /* RuntimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A75245A7C0A00003376 /* RuntimeModel.m */; };
 		F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B94A78245A7EBF00003376 /* TargetModel.m */; };
+		F0BB8F93252085AC006BFE7C /* RunLoopWatchCatonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BB8F92252085AC006BFE7C /* RunLoopWatchCatonController.m */; };
 		F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF298B246CD66E005118E0 /* InfrastructureController.m */; };
 		F0BF2993246CE175005118E0 /* MVCAppleController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF2992246CE175005118E0 /* MVCAppleController.m */; };
 		F0BF2996246CE1A1005118E0 /* MVCChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BF2995246CE1A1005118E0 /* MVCChangeController.m */; };
@@ -138,6 +139,8 @@
 		F0B94A75245A7C0A00003376 /* RuntimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeModel.m; sourceTree = "<group>"; };
 		F0B94A77245A7EBF00003376 /* TargetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
 		F0B94A78245A7EBF00003376 /* TargetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
+		F0BB8F91252085AC006BFE7C /* RunLoopWatchCatonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopWatchCatonController.h; sourceTree = "<group>"; };
+		F0BB8F92252085AC006BFE7C /* RunLoopWatchCatonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopWatchCatonController.m; sourceTree = "<group>"; };
 		F0BF2988246CD5ED005118E0 /* 项目架构与架构设计.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "项目架构与架构设计.md"; sourceTree = "<group>"; };
 		F0BF298A246CD66E005118E0 /* InfrastructureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfrastructureController.h; sourceTree = "<group>"; };
 		F0BF298B246CD66E005118E0 /* InfrastructureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfrastructureController.m; sourceTree = "<group>"; };
@@ -302,6 +305,7 @@
 				F020905C24FF90190075D9C0 /* 日历和提醒事项 */,
 				F0EE80702456AB3300B4F264 /* Utils */,
 				F0B7C523244EBE920066546F /* UI相关 */,
+				F03F8885245273A5008C1E95 /* OC语言 */,
 				F0BF3E53244FD03E0063B2B2 /* Animation动画 */,
 				F0A126BE245129860001F8D7 /* OC对象底层 */,
 				F03F888C24528A6F008C1E95 /* 消息传递方式 */,
@@ -477,6 +481,8 @@
 			children = (
 				F0B0E0FC24625BA700E2FFC5 /* RunLoopController.h */,
 				F0B0E0FD24625BA700E2FFC5 /* RunLoopController.m */,
+				F0BB8F91252085AC006BFE7C /* RunLoopWatchCatonController.h */,
+				F0BB8F92252085AC006BFE7C /* RunLoopWatchCatonController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -496,7 +502,6 @@
 			children = (
 				F0B7C526244ECAC50066546F /* UIController.h */,
 				F0B7C527244ECAC50066546F /* UIController.m */,
-				F03F8885245273A5008C1E95 /* OC语言 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -949,6 +954,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E58E262455270100F77AAD /* KVCModel.m in Sources */,
+				F0BB8F93252085AC006BFE7C /* RunLoopWatchCatonController.m in Sources */,
 				F0BF299C246CE1D8005118E0 /* MVVMController.m in Sources */,
 				F048B86024721B24001BA522 /* DataSafeEncryptController.m in Sources */,
 				F0BF29AB246CE54E005118E0 /* MVCChangeView.m in Sources */,

@@ -21,12 +21,12 @@
     self.title = @"日历和提醒事项";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *birthdayStr=@"2020-09-02 16:58:00";
+    NSString *birthdayStr=@"2020-09-14 11:45:00";
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *birthdayDate = [dateFormatter dateFromString:birthdayStr];
-//    [self addEventNotify:birthdayDate title:@"测试日历添加事件"];
-    [self addReminderNotify:birthdayDate title:@"测试添加提醒"];
+    [self addEventNotify:birthdayDate title:@"您今天预约了外勤事件，请及时签到，若已签到请忽略"];
+//    [self addReminderNotify:birthdayDate title:@"测试添加提醒"];
 }
 
 - (void)addEventNotify:(NSDate *)date title:(NSString *)title {
@@ -39,7 +39,8 @@
             myEvent.title     = title;  //标题
             myEvent.startDate = date; //开始date   required
             myEvent.endDate   = date;  //结束date    required
-            [myEvent addAlarm:[EKAlarm alarmWithAbsoluteDate:date]]; //添加一个闹钟  optional
+//            [myEvent addAlarm:[EKAlarm alarmWithAbsoluteDate:date]]; //添加一个闹钟  optional
+            myEvent.alarms = @[[EKAlarm alarmWithRelativeOffset:60.0f * -10.0f], [EKAlarm alarmWithRelativeOffset:60.0f * -5.0f], [EKAlarm alarmWithAbsoluteDate:date]];
             [myEvent setCalendar:[eventDB defaultCalendarForNewEvents]]; //添加calendar  required
             NSError *err;
             [eventDB saveEvent:myEvent span:EKSpanThisEvent error:&err]; //保存
