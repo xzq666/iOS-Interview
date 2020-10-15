@@ -26,6 +26,7 @@
 		F048B86624722AD9001BA522 /* DebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = F048B86524722AD9001BA522 /* DebugController.m */; };
 		F05DD0B22457BDF7006DE571 /* BlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05DD0B12457BDF7006DE571 /* BlockController.m */; };
 		F07E589A246A340600BCC2F5 /* MemeryManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E5899246A340600BCC2F5 /* MemeryManageController.m */; };
+		F085784125385D6000EDA5A1 /* XZQMemoryAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = F085784025385D6000EDA5A1 /* XZQMemoryAnalyzer.m */; };
 		F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A126C1245134130001F8D7 /* OCGroundController.m */; };
 		F0B0E0FE24625BA700E2FFC5 /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B0E0FD24625BA700E2FFC5 /* RunLoopController.m */; };
 		F0B7C528244ECAC50066546F /* UIController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B7C527244ECAC50066546F /* UIController.m */; };
@@ -116,6 +117,8 @@
 		F07E5898246A340600BCC2F5 /* MemeryManageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemeryManageController.h; sourceTree = "<group>"; };
 		F07E5899246A340600BCC2F5 /* MemeryManageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemeryManageController.m; sourceTree = "<group>"; };
 		F07E589B246A35E500BCC2F5 /* 内存管理相关.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "内存管理相关.md"; sourceTree = "<group>"; };
+		F085783F25385D6000EDA5A1 /* XZQMemoryAnalyzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMemoryAnalyzer.h; sourceTree = "<group>"; };
+		F085784025385D6000EDA5A1 /* XZQMemoryAnalyzer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMemoryAnalyzer.m; sourceTree = "<group>"; };
 		F0A126BF24512A3A0001F8D7 /* OC对象底层.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象底层.md"; sourceTree = "<group>"; };
 		F0A126C0245134130001F8D7 /* OCGroundController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCGroundController.h; sourceTree = "<group>"; };
 		F0A126C1245134130001F8D7 /* OCGroundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCGroundController.m; sourceTree = "<group>"; };
@@ -455,6 +458,15 @@
 				F07E5899246A340600BCC2F5 /* MemeryManageController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F085783E25385D4000EDA5A1 /* 内存监控 */ = {
+			isa = PBXGroup;
+			children = (
+				F085783F25385D6000EDA5A1 /* XZQMemoryAnalyzer.h */,
+				F085784025385D6000EDA5A1 /* XZQMemoryAnalyzer.m */,
+			);
+			path = "内存监控";
 			sourceTree = "<group>";
 		};
 		F0A126BE245129860001F8D7 /* OC对象底层 */ = {
@@ -841,6 +853,7 @@
 		F0EE80702456AB3300B4F264 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F085783E25385D4000EDA5A1 /* 内存监控 */,
 				F0C1E3C524BC384500DB98B2 /* 卡顿监控 */,
 				F0EE80712456AB3A00B4F264 /* Category */,
 			);
@@ -969,6 +982,7 @@
 				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
 				F0BF29BD246CE867005118E0 /* MVVMView.m in Sources */,
 				F0E58E1C245516FD00F77AAD /* KVOController.m in Sources */,
+				F085784125385D6000EDA5A1 /* XZQMemoryAnalyzer.m in Sources */,
 				F0C81CBB2463B80F00244FBD /* XZQPermenantThread.m in Sources */,
 				F0B7C52F244EDF780066546F /* XZQView.m in Sources */,
 				F0B94A71245A5C3E00003376 /* RuntimeController.m in Sources */,
