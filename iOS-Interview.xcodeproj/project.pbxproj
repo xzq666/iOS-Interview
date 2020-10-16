@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		F0244AE2244EA03400897508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0244AE0244EA03400897508 /* LaunchScreen.storyboard */; };
 		F0244AE5244EA03400897508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0244AE4244EA03400897508 /* main.m */; };
 		F0244AEC244EA1E300897508 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0244AEB244EA1E300897508 /* README.md */; };
+		F025267A2539362C000F7190 /* ChartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02526792539362C000F7190 /* ChartsController.m */; };
 		F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F888A245273FD008C1E95 /* OCLanguageController.m */; };
 		F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03F889024528AB4008C1E95 /* MessagePassController.m */; };
 		F048B86024721B24001BA522 /* DataSafeEncryptController.m in Sources */ = {isa = PBXBuildFile; fileRef = F048B85F24721B24001BA522 /* DataSafeEncryptController.m */; };
@@ -99,6 +100,8 @@
 		F0244AE3244EA03400897508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0244AE4244EA03400897508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0244AEB244EA1E300897508 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F02526782539362C000F7190 /* ChartsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartsController.h; sourceTree = "<group>"; };
+		F02526792539362C000F7190 /* ChartsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartsController.m; sourceTree = "<group>"; };
 		F03F8886245273B8008C1E95 /* OC语言.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC语言.md"; sourceTree = "<group>"; };
 		F03F8889245273FD008C1E95 /* OCLanguageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLanguageController.h; sourceTree = "<group>"; };
 		F03F888A245273FD008C1E95 /* OCLanguageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLanguageController.m; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 		F0244AD1244EA03200897508 /* iOS-Interview */ = {
 			isa = PBXGroup;
 			children = (
+				F025267625393609000F7190 /* 图表 */,
 				F020905C24FF90190075D9C0 /* 日历和提醒事项 */,
 				F0EE80702456AB3300B4F264 /* Utils */,
 				F0B7C523244EBE920066546F /* UI相关 */,
@@ -339,6 +343,23 @@
 				F0244AE4244EA03400897508 /* main.m */,
 			);
 			path = "iOS-Interview";
+			sourceTree = "<group>";
+		};
+		F025267625393609000F7190 /* 图表 */ = {
+			isa = PBXGroup;
+			children = (
+				F025267725393614000F7190 /* Controller */,
+			);
+			path = "图表";
+			sourceTree = "<group>";
+		};
+		F025267725393614000F7190 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F02526782539362C000F7190 /* ChartsController.h */,
+				F02526792539362C000F7190 /* ChartsController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F03F8885245273A5008C1E95 /* OC语言 */ = {
@@ -880,6 +901,7 @@
 				F0244ACB244EA03200897508 /* Sources */,
 				F0244ACC244EA03200897508 /* Frameworks */,
 				F0244ACD244EA03200897508 /* Resources */,
+				398100E36D724EDFC93B6FE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -959,6 +981,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		398100E36D724EDFC93B6FE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Interview/Pods-iOS-Interview-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-Interview/Pods-iOS-Interview-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-Interview/Pods-iOS-Interview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1026,6 +1065,7 @@
 				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
 				F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */,
 				F0BF2999246CE1BA005118E0 /* MVPController.m in Sources */,
+				F025267A2539362C000F7190 /* ChartsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

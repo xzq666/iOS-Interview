@@ -1,30 +1,42 @@
 PODS:
-  - AFNetworking (4.0.0):
-    - AFNetworking/NSURLSession (= 4.0.0)
-    - AFNetworking/Reachability (= 4.0.0)
-    - AFNetworking/Security (= 4.0.0)
-    - AFNetworking/Serialization (= 4.0.0)
-    - AFNetworking/UIKit (= 4.0.0)
-  - AFNetworking/NSURLSession (4.0.0):
+  - AAChartKit (5.0.4)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.0)
-  - AFNetworking/Security (4.0.0)
-  - AFNetworking/Serialization (4.0.0)
-  - AFNetworking/UIKit (4.0.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
 
 DEPENDENCIES:
+  - AAChartKit (from `https://github.com/AAChartModel/AAChartKit.git`)
   - AFNetworking
 
 SPEC REPOS:
   trunk:
     - AFNetworking
 
-SPEC CHECKSUMS:
-  AFNetworking: d9fdf484a3c723ec3c558a41cc5754c7e845ee77
+EXTERNAL SOURCES:
+  AAChartKit:
+    :git: https://github.com/AAChartModel/AAChartKit.git
 
-PODFILE CHECKSUM: e8f776db03b0076415350dd98648c5e10424cd5b
+CHECKOUT OPTIONS:
+  AAChartKit:
+    :commit: ac329683486aa5c42bfceec09606f8d8ec15314b
+    :git: https://github.com/AAChartModel/AAChartKit.git
+
+SPEC CHECKSUMS:
+  AAChartKit: 0f69007e943e3d751b02e36df8ef5ea4fea668d9
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+
+PODFILE CHECKSUM: 049c23e940e07d2a5e8f3e25b08e1f232208dc05
 
 COCOAPODS: 1.9.1
