@@ -15,14 +15,20 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - MJExtension (3.2.2)
+  - Protobuf (3.13.0)
 
 DEPENDENCIES:
   - AAChartKit (from `https://github.com/AAChartModel/AAChartKit.git`)
   - AFNetworking
+  - MJExtension
+  - Protobuf
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - MJExtension
+    - Protobuf
 
 EXTERNAL SOURCES:
   AAChartKit:
@@ -36,7 +42,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AAChartKit: 0f69007e943e3d751b02e36df8ef5ea4fea668d9
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
 
-PODFILE CHECKSUM: 049c23e940e07d2a5e8f3e25b08e1f232208dc05
+PODFILE CHECKSUM: 7377c04ee34aa3495bb00925e1d6c3d065d09d0c
 
 COCOAPODS: 1.9.1

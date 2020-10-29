@@ -73,6 +73,10 @@
 		F0EE80692456872900B4F264 /* CategoryFirstModel+Two.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE80682456872900B4F264 /* CategoryFirstModel+Two.m */; };
 		F0EE806F24568E2C00B4F264 /* CategoryFirstSubModel+One.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE806E24568E2C00B4F264 /* CategoryFirstSubModel+One.m */; };
 		F0EE80742456AB4F00B4F264 /* UIViewController+BackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE80732456AB4F00B4F264 /* UIViewController+BackItem.m */; };
+		F0FB01602539A19F002F8E65 /* SentBody.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB015A2539A19F002F8E65 /* SentBody.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0FB01612539A19F002F8E65 /* Message.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB015C2539A19F002F8E65 /* Message.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0FB01622539A19F002F8E65 /* ReplyBody.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB015E2539A19F002F8E65 /* ReplyBody.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0FB016A2539A1EA002F8E65 /* IMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB01692539A1EA002F8E65 /* IMLoginController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +229,14 @@
 		F0EE806E24568E2C00B4F264 /* CategoryFirstSubModel+One.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CategoryFirstSubModel+One.m"; sourceTree = "<group>"; };
 		F0EE80722456AB4F00B4F264 /* UIViewController+BackItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BackItem.h"; path = "iOS-Interview/Utils/UIViewController+BackItem.h"; sourceTree = SOURCE_ROOT; };
 		F0EE80732456AB4F00B4F264 /* UIViewController+BackItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BackItem.m"; path = "iOS-Interview/Utils/UIViewController+BackItem.m"; sourceTree = SOURCE_ROOT; };
+		F0FB015A2539A19F002F8E65 /* SentBody.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentBody.pbobjc.m; sourceTree = "<group>"; };
+		F0FB015B2539A19F002F8E65 /* ReplyBody.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyBody.pbobjc.h; sourceTree = "<group>"; };
+		F0FB015C2539A19F002F8E65 /* Message.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.pbobjc.m; sourceTree = "<group>"; };
+		F0FB015D2539A19F002F8E65 /* Message.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.pbobjc.h; sourceTree = "<group>"; };
+		F0FB015E2539A19F002F8E65 /* ReplyBody.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyBody.pbobjc.m; sourceTree = "<group>"; };
+		F0FB015F2539A19F002F8E65 /* SentBody.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentBody.pbobjc.h; sourceTree = "<group>"; };
+		F0FB01682539A1EA002F8E65 /* IMLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMLoginController.h; sourceTree = "<group>"; };
+		F0FB01692539A1EA002F8E65 /* IMLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMLoginController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +320,7 @@
 		F0244AD1244EA03200897508 /* iOS-Interview */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB012F25399545002F8E65 /* IM */,
 				F025267625393609000F7190 /* 图表 */,
 				F020905C24FF90190075D9C0 /* 日历和提醒事项 */,
 				F0EE80702456AB3300B4F264 /* Utils */,
@@ -890,6 +903,45 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		F0FB012F25399545002F8E65 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB01302539954A002F8E65 /* Model */,
+				F0FB013A25399805002F8E65 /* View */,
+				F0FB013B2539981B002F8E65 /* Controller */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		F0FB01302539954A002F8E65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB015D2539A19F002F8E65 /* Message.pbobjc.h */,
+				F0FB015C2539A19F002F8E65 /* Message.pbobjc.m */,
+				F0FB015B2539A19F002F8E65 /* ReplyBody.pbobjc.h */,
+				F0FB015E2539A19F002F8E65 /* ReplyBody.pbobjc.m */,
+				F0FB015F2539A19F002F8E65 /* SentBody.pbobjc.h */,
+				F0FB015A2539A19F002F8E65 /* SentBody.pbobjc.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0FB013A25399805002F8E65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0FB013B2539981B002F8E65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB01682539A1EA002F8E65 /* IMLoginController.h */,
+				F0FB01692539A1EA002F8E65 /* IMLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1017,6 +1069,7 @@
 				F0BF29A8246CE53C005118E0 /* MVCChangeModel.m in Sources */,
 				F0171618246A975B008DC9AC /* XZQProxy.m in Sources */,
 				F0BF29B4246CE67B005118E0 /* MVPPresent.m in Sources */,
+				F0FB016A2539A1EA002F8E65 /* IMLoginController.m in Sources */,
 				F0EE80742456AB4F00B4F264 /* UIViewController+BackItem.m in Sources */,
 				F03F888B245273FD008C1E95 /* OCLanguageController.m in Sources */,
 				F0BF29BD246CE867005118E0 /* MVVMView.m in Sources */,
@@ -1029,6 +1082,7 @@
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
 				F0BF29B7246CE84E005118E0 /* MVVMModel.m in Sources */,
+				F0FB01612539A19F002F8E65 /* Message.pbobjc.m in Sources */,
 				F0D20FEA2466398500F22A52 /* MultiThreadController.m in Sources */,
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
 				F07E589A246A340600BCC2F5 /* MemeryManageController.m in Sources */,
@@ -1041,6 +1095,7 @@
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
 				F020906024FF90440075D9C0 /* CalenderEventController.m in Sources */,
 				F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */,
+				F0FB01622539A19F002F8E65 /* ReplyBody.pbobjc.m in Sources */,
 				F0B94A79245A7EBF00003376 /* TargetModel.m in Sources */,
 				F0BF3E58244FD60C0063B2B2 /* AnimationController.m in Sources */,
 				F0C54989246E2308000BFCD0 /* PerformsController.m in Sources */,
@@ -1061,6 +1116,7 @@
 				F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */,
 				F0B8C89224736A0E00C90910 /* CodeController.m in Sources */,
 				F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */,
+				F0FB01602539A19F002F8E65 /* SentBody.pbobjc.m in Sources */,
 				F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */,
 				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
 				F0A126C2245134130001F8D7 /* OCGroundController.m in Sources */,

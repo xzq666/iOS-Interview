@@ -29,6 +29,7 @@
 #import "CalenderEventController.h"
 #import "RunLoopWatchCatonController.h"
 #import "ChartsController.h"
+#import "IMLoginController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -58,6 +59,17 @@
         self.view.backgroundColor = [UIColor whiteColor];
     };
     
+    NSMethodSignature *signature = [ViewController instanceMethodSignatureForSelector:@selector(sendMessageWithPhone:WithName:)];
+    NSInvocation *invacation = [NSInvocation invocationWithMethodSignature:signature];
+    invacation.target = self;
+    invacation.selector = @selector(sendMessageWithPhone:WithName:);
+    NSString *phone = @"15389898989";
+    NSString *name = @"xza";
+    // 0为self 1位_cmd
+    [invacation setArgument:&phone atIndex:2];
+    [invacation setArgument:&name atIndex:3];
+    [invacation invoke];
+    
     // 判断是否是越狱机
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/Cydia.app"]) {
         NSLog(@"此设备已越狱");
@@ -67,7 +79,7 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试", @"图表"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试", @"图表", @"IM"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
@@ -89,12 +101,18 @@
                            @"源码理解相关面试题，包括SDWebImage、AFNetworking等",
                            @"用Eventkit向日历和提醒事项中加入事件和闹铃",
                            @"使用RunLoop进行实时卡顿监控测试",
-                           @"使用AAChartKit框架制作各种图表"
+                           @"使用AAChartKit框架制作各种图表",
+                           @"IM聊天相关"
     ];
-    NSArray *controllerTitles = @[@"UIController", @"AnimationController", @"OCGroundController", @"OCLanguageController", @"MessagePassController", @"KVOController", @"KVCController", @"CategoryController", @"BlockController", @"RuntimeController", @"RunLoopController", @"MultiThreadController", @"MemeryManageController", @"InfrastructureController", @"PerformsController", @"ImageController", @"DataSafeEncryptController", @"DebugController", @"CodeController", @"CalenderEventController", @"RunLoopWatchCatonController", @"ChartsController"];
+    NSArray *controllerTitles = @[@"UIController", @"AnimationController", @"OCGroundController", @"OCLanguageController", @"MessagePassController", @"KVOController", @"KVCController", @"CategoryController", @"BlockController", @"RuntimeController", @"RunLoopController", @"MultiThreadController", @"MemeryManageController", @"InfrastructureController", @"PerformsController", @"ImageController", @"DataSafeEncryptController", @"DebugController", @"CodeController", @"CalenderEventController", @"RunLoopWatchCatonController", @"ChartsController", @"IMLoginController"];
     [self loadNewData:titles sub:subTitles controllerNames:controllerTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
+
+}
+
+- (void)sendMessageWithPhone:(NSString*)phone WithName:(NSString*)name {
+    NSLog(@"􏹧􏳃􏴗=%@, 􏹨􏲦=%@", phone, name);
 }
 
 - (void)loadNewData:(NSArray *)titles sub:(NSArray *)subTitles controllerNames:(NSArray *)controllerNames {

@@ -10,6 +10,8 @@
 #import <os/lock.h>
 #import <pthread.h>
 
+static int gcdIdx = 0;
+
 @interface MultiThreadController ()
 
 @property(nonatomic,assign) NSInteger count;
@@ -56,13 +58,56 @@
 //    [self pthreadRwLockTest];
     
     // 使用GCD栅栏函数实现多读单写
-    [self barrierTest];
+//    [self barrierTest];
     
     // 其内部使用的是 dispatch_time_t 管理时间，而不是 NSTimer，所以不用关心RunLoop是否开启
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        NSLog(@"执行");
 //    });
+    
+    NSLog(@"开始任务");
+    // 创建定时器对象
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    // 设置定时器
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC, 0.0 * NSEC_PER_SEC);
+    // 设置定时器任务
+    gcdIdx = 0;
+    dispatch_source_set_event_handler(timer, ^{
+        NSLog(@"执行一次");
+//        NSLog(@"GCD Method: %d", gcdIdx++);
+//        NSLog(@"%@", [NSThread currentThread]);
+//
+//        if(gcdIdx == 5) {
+//            // 终止定时器
+//            NSLog(@"结束任务");
+//            dispatch_suspend(timer);
+//        }
+        if (gcdIdx == 5) {
+            dispatch_suspend(timer);
+        }
+    });
+    // 启动任务
+    dispatch_resume(timer);
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn setTitle:@"stop" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(stop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
+
+- (void)stop {
+    NSLog(@"停止");
+    gcdIdx = 5;
+}
+
+- (void)dealloc
+{
+    gcdIdx = 5;
+    pthread_mutex_destroy(&_mutexLock);
+    pthread_rwlock_destroy(&_rwlock);
+}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSThread *thread = [[NSThread alloc] initWithBlock:^{
@@ -135,12 +180,6 @@
             pthread_mutex_unlock(&self->_mutexLock);
         });
     }
-}
-
-- (void)dealloc
-{
-    pthread_mutex_destroy(&_mutexLock);
-    pthread_rwlock_destroy(&_rwlock);
 }
 
 // 使用读写锁rwlock实现多读单写
