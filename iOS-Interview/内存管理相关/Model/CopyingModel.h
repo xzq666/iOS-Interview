@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CopyModel : NSObject<NSCopying>
+@interface CopyingModel : NSObject<NSCopying, NSMutableCopying>
 
 @property(nonatomic,assign) int age;
 @property(nonatomic,copy) NSString *name;

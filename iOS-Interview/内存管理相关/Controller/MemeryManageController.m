@@ -7,7 +7,7 @@
 //
 
 #import "MemeryManageController.h"
-#import "CopyModel.h"
+#import "CopyingModel.h"
 #import "XZQProxy.h"
 #import "XZQProxy2.h"
 #import <objc/runtime.h>
@@ -82,14 +82,14 @@ uintptr_t _objc_decodeTaggedPointer(id ptr) {
 }
 
 - (void)copyingTest {
-    CopyModel *model1 = [[CopyModel alloc] init];
+    CopyingModel *model1 = [[CopyingModel alloc] init];
     model1.age = 20;
     model1.name = @"xzq";
     NSLog(@"model1 age:%d", model1.age);
     NSLog(@"model1 name:%@", model1.name);
     
     // 若CopyModel没有实现NSCopying协议，调用copy方法程序会crash
-    CopyModel *model2 = [model1 copy];
+    CopyingModel *model2 = [model1 copy];
     NSLog(@"model2 age:%d", model2.age);
     NSLog(@"model2 name:%@", model2.name);
 }

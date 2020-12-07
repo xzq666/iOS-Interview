@@ -77,6 +77,16 @@
         NSLog(@"此设备未越狱");
     }
     
+    NSLog(@"1235");
+    // 1.主队列,不是自己创建的,是从系统获得,是一个特殊的串行队列,一定对应主线程
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    for (int i = 0; i<20; i++) {
+        dispatch_async(mainQueue, ^{
+            NSLog(@"%d->%@",i,[NSThread currentThread]);
+        });
+    }
+    NSLog(@"呵呵");
+    
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
     NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试", @"图表", @"IM"];

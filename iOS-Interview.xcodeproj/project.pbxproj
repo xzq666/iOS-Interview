@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		417D2F17522F057F47C8773D /* libPods-iOS-Interview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1264DF5A552B65E9CF7A332 /* libPods-iOS-Interview.a */; };
-		F0171615246A89BD008DC9AC /* CopyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0171614246A89BD008DC9AC /* CopyModel.m */; };
+		F0171615246A89BD008DC9AC /* CopyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0171614246A89BD008DC9AC /* CopyingModel.m */; };
 		F0171618246A975B008DC9AC /* XZQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0171617246A975B008DC9AC /* XZQProxy.m */; };
 		F017161B246A987B008DC9AC /* XZQProxy2.m in Sources */ = {isa = PBXBuildFile; fileRef = F017161A246A987B008DC9AC /* XZQProxy2.m */; };
 		F020906024FF90440075D9C0 /* CalenderEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = F020905F24FF90440075D9C0 /* CalenderEventController.m */; };
@@ -77,14 +77,16 @@
 		F0FB01612539A19F002F8E65 /* Message.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB015C2539A19F002F8E65 /* Message.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F0FB01622539A19F002F8E65 /* ReplyBody.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB015E2539A19F002F8E65 /* ReplyBody.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F0FB016A2539A1EA002F8E65 /* IMLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB01692539A1EA002F8E65 /* IMLoginController.m */; };
+		F0FB666A25664EED00539CAE /* XZQTriangleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB666925664EED00539CAE /* XZQTriangleButton.m */; };
+		F0FB666F25665ACE00539CAE /* XZQLRUMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB666E25665ACE00539CAE /* XZQLRUMutableDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		118DEDBB9BAEC22022259DC4 /* Pods-iOS-Interview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Interview.release.xcconfig"; path = "Target Support Files/Pods-iOS-Interview/Pods-iOS-Interview.release.xcconfig"; sourceTree = "<group>"; };
 		1CC42787D1EAB1DC65A3EDAC /* Pods-iOS-Interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Interview.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Interview/Pods-iOS-Interview.debug.xcconfig"; sourceTree = "<group>"; };
 		B1264DF5A552B65E9CF7A332 /* libPods-iOS-Interview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-Interview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0171613246A89BD008DC9AC /* CopyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyModel.h; sourceTree = "<group>"; };
-		F0171614246A89BD008DC9AC /* CopyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyModel.m; sourceTree = "<group>"; };
+		F0171613246A89BD008DC9AC /* CopyingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyingModel.h; sourceTree = "<group>"; };
+		F0171614246A89BD008DC9AC /* CopyingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyingModel.m; sourceTree = "<group>"; };
 		F0171616246A975B008DC9AC /* XZQProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQProxy.h; sourceTree = "<group>"; };
 		F0171617246A975B008DC9AC /* XZQProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQProxy.m; sourceTree = "<group>"; };
 		F0171619246A987B008DC9AC /* XZQProxy2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQProxy2.h; sourceTree = "<group>"; };
@@ -237,6 +239,10 @@
 		F0FB015F2539A19F002F8E65 /* SentBody.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentBody.pbobjc.h; sourceTree = "<group>"; };
 		F0FB01682539A1EA002F8E65 /* IMLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMLoginController.h; sourceTree = "<group>"; };
 		F0FB01692539A1EA002F8E65 /* IMLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMLoginController.m; sourceTree = "<group>"; };
+		F0FB666825664EED00539CAE /* XZQTriangleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTriangleButton.h; sourceTree = "<group>"; };
+		F0FB666925664EED00539CAE /* XZQTriangleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTriangleButton.m; sourceTree = "<group>"; };
+		F0FB666D25665ACE00539CAE /* XZQLRUMutableDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQLRUMutableDictionary.h; sourceTree = "<group>"; };
+		F0FB666E25665ACE00539CAE /* XZQLRUMutableDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQLRUMutableDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,8 +277,8 @@
 		F0171612246A89A3008DC9AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F0171613246A89BD008DC9AC /* CopyModel.h */,
-				F0171614246A89BD008DC9AC /* CopyModel.m */,
+				F0171613246A89BD008DC9AC /* CopyingModel.h */,
+				F0171614246A89BD008DC9AC /* CopyingModel.m */,
 				F0171616246A975B008DC9AC /* XZQProxy.h */,
 				F0171617246A975B008DC9AC /* XZQProxy.m */,
 				F0171619246A987B008DC9AC /* XZQProxy2.h */,
@@ -887,6 +893,7 @@
 		F0EE80702456AB3300B4F264 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB666125664E8000539CAE /* 自定义控件 */,
 				F085783E25385D4000EDA5A1 /* 内存监控 */,
 				F0C1E3C524BC384500DB98B2 /* 卡顿监控 */,
 				F0EE80712456AB3A00B4F264 /* Category */,
@@ -942,6 +949,33 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F0FB666125664E8000539CAE /* 自定义控件 */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB666C25665A9B00539CAE /* LRU算法的字典容器 */,
+				F0FB666225664E8A00539CAE /* 三角形按钮 */,
+			);
+			path = "自定义控件";
+			sourceTree = "<group>";
+		};
+		F0FB666225664E8A00539CAE /* 三角形按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB666825664EED00539CAE /* XZQTriangleButton.h */,
+				F0FB666925664EED00539CAE /* XZQTriangleButton.m */,
+			);
+			path = "三角形按钮";
+			sourceTree = "<group>";
+		};
+		F0FB666C25665A9B00539CAE /* LRU算法的字典容器 */ = {
+			isa = PBXGroup;
+			children = (
+				F0FB666D25665ACE00539CAE /* XZQLRUMutableDictionary.h */,
+				F0FB666E25665ACE00539CAE /* XZQLRUMutableDictionary.m */,
+			);
+			path = "LRU算法的字典容器";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -975,6 +1009,7 @@
 				TargetAttributes = {
 					F0244ACE244EA03200897508 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -1082,6 +1117,7 @@
 				F0B7C52C244EDB2C0066546F /* XZQButton.m in Sources */,
 				F0EE8060245686E200B4F264 /* CategorySecondModel.m in Sources */,
 				F0BF29B7246CE84E005118E0 /* MVVMModel.m in Sources */,
+				F0FB666F25665ACE00539CAE /* XZQLRUMutableDictionary.m in Sources */,
 				F0FB01612539A19F002F8E65 /* Message.pbobjc.m in Sources */,
 				F0D20FEA2466398500F22A52 /* MultiThreadController.m in Sources */,
 				F0EE8063245686EF00B4F264 /* CategoryFirstSubModel.m in Sources */,
@@ -1091,7 +1127,7 @@
 				F0BF29AE246CE662005118E0 /* MVPView.m in Sources */,
 				F0CF36E62459236400B55A23 /* BlockModel.m in Sources */,
 				F0EE805D245686D700B4F264 /* CategoryFirstModel.m in Sources */,
-				F0171615246A89BD008DC9AC /* CopyModel.m in Sources */,
+				F0171615246A89BD008DC9AC /* CopyingModel.m in Sources */,
 				F0244ADA244EA03200897508 /* ViewController.m in Sources */,
 				F020906024FF90440075D9C0 /* CalenderEventController.m in Sources */,
 				F0BF298C246CD66E005118E0 /* InfrastructureController.m in Sources */,
@@ -1116,6 +1152,7 @@
 				F0BF29BA246CE85C005118E0 /* MVVMViewModel.m in Sources */,
 				F0B8C89224736A0E00C90910 /* CodeController.m in Sources */,
 				F0BF29C4246CEA9F005118E0 /* FBKVOController.m in Sources */,
+				F0FB666A25664EED00539CAE /* XZQTriangleButton.m in Sources */,
 				F0FB01602539A19F002F8E65 /* SentBody.pbobjc.m in Sources */,
 				F0BF29C3246CEA9F005118E0 /* NSObject+FBKVOController.m in Sources */,
 				F03F889124528AB4008C1E95 /* MessagePassController.m in Sources */,
@@ -1262,6 +1299,7 @@
 			baseConfigurationReference = 1CC42787D1EAB1DC65A3EDAC /* Pods-iOS-Interview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1275,6 +1313,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xzq.app.iOS-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Interview/Utils/自定义控件/三角形按钮/iOS-Interview-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1284,6 +1325,7 @@
 			baseConfigurationReference = 118DEDBB9BAEC22022259DC4 /* Pods-iOS-Interview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX8283AUA8;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1297,6 +1339,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xzq.app.iOS-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Interview/Utils/自定义控件/三角形按钮/iOS-Interview-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CategoryFirstModelDelegate <NSObject>
+
+- (void)categoryFirstModelTest;
+
+@end
+
 @interface CategoryFirstModel : NSObject
 
 @property(nonatomic,copy) NSString *name;

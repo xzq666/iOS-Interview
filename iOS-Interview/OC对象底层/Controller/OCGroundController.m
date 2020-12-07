@@ -7,6 +7,9 @@
 //
 
 #import "OCGroundController.h"
+#import "XZQTriangleButton.h"
+#import "CopyingModel.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface OCGroundController ()
 
@@ -29,6 +32,27 @@
     };
     
     [self copyTest];
+    
+    XZQTriangleButton *btn = [[XZQTriangleButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    btn.buttonClick = ^(void) {
+        [self loginButtonClick];
+    };
+    [self.view addSubview:btn];
+    
+    CopyingModel *model1 = [[CopyingModel alloc] init];
+    model1.name = @"xzq";
+    model1.age = 15;
+    NSLog(@"model1- %p - %@ - %d", model1, model1.name, model1.age);
+    
+    CopyingModel *model2 = [model1 copy];
+    NSLog(@"model2- %p - %@ - %d", model2, model2.name, model2.age);
+    model2.age = 20;
+    NSLog(@"model1- %p - %@ - %d", model1, model1.name, model1.age);
+    
+    CopyingModel *model3 = [model1 mutableCopy];
+    NSLog(@"model3- %p - %@ - %d", model3, model3.name, model3.age);
+    model3.age = 30;
+    NSLog(@"model1- %p - %@ - %d", model1, model1.name, model1.age);
 }
 
 - (void)copyTest {
@@ -41,6 +65,104 @@
     [mutableString setString:@"change"];
     // 被strong修饰的NSString被更改了，被copy修饰的不会更改
     NSLog(@"str1 is %@, str2 is %@", self.str1, self.str2);
+    
+    NSArray *arr1 = @[@"1"];
+    NSMutableArray *arr2 = [arr1 mutableCopy];
+    [arr2 addObject:@"2"];
+    NSLog(@"arr1:%@", arr1);
+    NSLog(@"arr2:%@", arr2);
+}
+
+- (void)loginButtonClick {
+    // 创建LAContext
+    LAContext *context = [LAContext new];
+    // 这个属性是设置指纹输入失败之后的弹出框的选项
+    context.localizedFallbackTitle = @"输入密码";
+    context.localizedCancelTitle = @"取消";
+    NSError *error = nil;
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键进行指纹登录" reply:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"登录成功");
+                });
+            } else {
+                NSLog(@"%@",error.localizedDescription);
+                switch (error.code) {
+                    case LAErrorSystemCancel:
+                    {
+                        NSLog(@"系统取消授权，如其他APP切入");
+                        break;
+                    }
+                    case LAErrorUserCancel:
+                    {
+                        NSLog(@"用户取消验证Touch ID");
+                        break;
+                    }
+                    case LAErrorAuthenticationFailed:
+                    {
+                        NSLog(@"授权失败");
+                        break;
+                    }
+                    case LAErrorPasscodeNotSet:
+                    {
+                        NSLog(@"系统未设置密码");
+                        break;
+                    }
+                    case LAErrorTouchIDNotAvailable:
+                    {
+                        NSLog(@"设备Touch ID不可用，例如未打开");
+                        break;
+                    }
+                    case LAErrorTouchIDNotEnrolled:
+                    {
+                        NSLog(@"设备Touch ID不可用，用户未录入");
+                        break;
+                    }
+                    case LAErrorUserFallback:
+                    {
+                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            NSLog(@"用户选择输入密码，切换主线程处理");
+                        }];
+                        break;
+                    }
+                    default:
+                    {
+                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            NSLog(@"其他情况，切换主线程处理");
+                            [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"指纹验证错误次数过多，请输入密码" reply:^(BOOL success, NSError * _Nullable error) {
+                                
+                            }];
+                        }];
+                        break;
+                    }
+                }
+            }
+        }];
+    } else {
+        NSLog(@"不支持指纹识别");
+        switch (error.code) {
+            case LAErrorTouchIDNotEnrolled:
+            {
+                NSLog(@"TouchID is not enrolled");
+                break;
+            }
+            case LAErrorPasscodeNotSet:
+            {
+                NSLog(@"A passcode has not been set");
+                break;
+            }
+            default:
+            {
+                NSLog(@"TouchID not available");
+                break;
+            }
+        }
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"指纹验证错误次数过多，请输入密码" reply:^(BOOL success, NSError * _Nullable error) {
+            
+        }];
+        NSLog(@"%@",error.localizedDescription);
+    }
 }
 
 @end

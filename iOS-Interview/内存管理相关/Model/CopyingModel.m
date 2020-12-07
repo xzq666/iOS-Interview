@@ -6,13 +6,17 @@
 //  Copyright © 2020 Xuzq. All rights reserved.
 //
 
-#import "CopyModel.h"
+#import "CopyingModel.h"
 
-@implementation CopyModel
+@implementation CopyingModel
 
 // 当调用CopyModel的copy方法时会触发这个代理方法
 - (id)copyWithZone:(NSZone *)zone {
-    CopyModel *model = [[CopyModel alloc] init];
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    CopyingModel *model = [[CopyingModel alloc] init];
     model.age = self.age;
     model.name = self.name;
     return model;
