@@ -30,6 +30,7 @@
 #import "RunLoopWatchCatonController.h"
 #import "ChartsController.h"
 #import "IMLoginController.h"
+#import "MemoryMoveController.h"
 
 @interface Module : NSObject
 @property(nonatomic,copy) NSString *title;
@@ -89,10 +90,11 @@
     
     // 数据源
     self.dataSource = [[NSMutableArray alloc] init];
-    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试", @"图表", @"IM"];
+    NSArray *titles = @[@"UI相关", @"Animation动画", @"OC对象底层", @"内存平移", @"OC语言", @"消息传递方式", @"KVO相关", @"KVC相关", @"分类Category相关", @"block相关", @"Runtime相关", @"RunLoop相关", @"多线程相关", @"内存管理相关", @"项目架构与架构设计", @"性能优化相关", @"图像处理相关", @"数据安全与加密", @"iOS调试技巧", @"源码理解", @"日历和提醒事项", @"卡顿监控测试", @"图表", @"IM"];
     NSArray *subTitles = @[@"UI相关面试题，如UITableView、事件响应链等",
                            @"Animation动画相关面试题，包括隐式动画、核心动画等",
                            @"OC对象底层相关面试题，例如OC对象、isa指针、属性关键字等",
+                           @"OC对象底层相关面试题，内存平移的分析验证",
                            @"OC语言相关面试题，主要来自Foundation框架",
                            @"消息传递方式相关面试题，包括通知、代理等",
                            @"KVO相关面试题，例如KVO原理、触发KVO方式等",
@@ -114,7 +116,7 @@
                            @"使用AAChartKit框架制作各种图表",
                            @"IM聊天相关"
     ];
-    NSArray *controllerTitles = @[@"UIController", @"AnimationController", @"OCGroundController", @"OCLanguageController", @"MessagePassController", @"KVOController", @"KVCController", @"CategoryController", @"BlockController", @"RuntimeController", @"RunLoopController", @"MultiThreadController", @"MemeryManageController", @"InfrastructureController", @"PerformsController", @"ImageController", @"DataSafeEncryptController", @"DebugController", @"CodeController", @"CalenderEventController", @"RunLoopWatchCatonController", @"ChartsController", @"IMLoginController"];
+    NSArray *controllerTitles = @[@"UIController", @"AnimationController", @"OCGroundController", @"MemoryMoveController", @"OCLanguageController", @"MessagePassController", @"KVOController", @"KVCController", @"CategoryController", @"BlockController", @"RuntimeController", @"RunLoopController", @"MultiThreadController", @"MemeryManageController", @"InfrastructureController", @"PerformsController", @"ImageController", @"DataSafeEncryptController", @"DebugController", @"CodeController", @"CalenderEventController", @"RunLoopWatchCatonController", @"ChartsController", @"IMLoginController"];
     [self loadNewData:titles sub:subTitles controllerNames:controllerTitles];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getValueFromVC:) name:@"getValueFromVC" object:nil];
@@ -153,7 +155,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     Module *model = self.dataSource[indexPath.row];
-    if (indexPath.row == 4) {
+    if (indexPath.row == 5) {
         MessagePassController *vc = [[NSClassFromString(model.controllerName) alloc] init];
         vc.delegate = self;
         vc.block = ^(NSString *param1, NSString * param2) {
